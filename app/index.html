@@ -29,102 +29,212 @@
     <div class="scalewrap"><img src="img/scale-en.svg" id="scaleimg"></div>
 </div>
 
-<div id=timepath>
-    <div class="planetwrapper">
-
-        <!--  -->
-        <div id="startwrap">
-            <svg version="1.1" id="start" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10">
-                <circle cx="5" cy="5" r="5"></circle>
-            </svg>
-            <div id="starttxt" class="labeltext">
-                START
-            </div>
+<div id="path_container">
+    <div id=upper_panel>
+        <div class="path_switcher">
+            <button id="button_both_paths">B</button>
+            <button id="button_upper_path">U</button>
+            <button id="button_lower_path">L</button>
         </div>
+    </div>
+    <div id=timepath>
+        <div class="planetwrapper">
 
-        <!--  -->
-        <div id="endwrap">
-            <svg version="1.1" id="end" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10">
-                <circle cx="5" cy="5" r="5"></circle>
-            </svg>
-            <div id="endtxt">
-                <span id="endlabel" class="labeltext">END</span><span style="font-size:.25em"><br/></span>
-            </div>
-        </div>
-
-        <div id="pretty-empty" class="essay" style="left:8275px">Pretty empty out here.</div>
-        <div id="halfway-there" class="essay" style="left:500000px">Halfway there.</div>
-
-        <div id="the-fact-that" class="essay" style="left:1300000px">The fact that you're here, in the midst of all this
-            nothing, is pretty amazing when you stop and think about it.
-        </div>
-        <div id="congratulations-on-making" class="essay" style="left:1500000px">Congratulations on making it this
-            far.
-        </div>
-
-        <div class="essay" style="left:1700500px">
-            <span id="might-as-well">Might as well stop now.</span>
-            <span
-                    style="margin-left:300px">
-                <a href="http://www.joshworth.com">
-                    <span id="back-to-josh">Back to JoshWorth.com</span></a> &nbsp;|&nbsp; <a
-                    href="https://twitter.com/misterjworth"><span
-                    id="follow-me-on">Follow me on Twitter</span></a></span>
-
-            <!--  Event navigation <li><a href="#nameofclass" class="eventjump"><img src="img/image_symbol"></a></li>-->
-            <ul class="nav">
-                <li><a href="#prevanchor" class="prevjump"><img src="img/jumpprev.svg"></a></li>
-                <li><a href="#starttxt" class="eventjump"><img src="img/start_icon.png"></a></li>
-                <li><a href="#endtxt" class="eventjump"><img src="img/end_icon.png"></a></li>
-                <li><a href="#nextanchor" class="nextjump"><img src="img/jumpnext.svg"></a></li>
-            </ul>
-
-            <div id="distance-counter">
-                <div id="counter"></div>
-                <span id="selectarrow"><img src="img/select-arrow.svg"></span>
-                <div id="unitselect">
-                    <ul>
-                        <li><a href="" id="km">km</a></li>
-                        <li><a href="" id="pixels">Pixels</a></li>
-                    </ul>
+            <!--  -->
+            <div id="startwrap">
+                <svg version="1.1" id="start" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10">
+                    <circle cx="5" cy="5" r="5"></circle>
+                </svg>
+                <div id="starttxt" class="labeltext">
+                    START
                 </div>
             </div>
 
-
-            <div id="lightspeeder"><a href=""><img src="img/lightspeed3.svg"><span class="warpfactor"> </span></a>
+            <!--  -->
+            <div id="endwrap">
+                <svg version="1.1" id="end" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10">
+                    <circle cx="5" cy="5" r="5"></circle>
+                </svg>
+                <div id="endtxt">
+                    <span id="endlabel" class="labeltext">END</span><span style="font-size:.25em"><br/></span>
+                </div>
             </div>
 
-            <div id="lightspeedmsg">
-                <div id="msg1">This is how fast light travels...</div>
-                <div id="msg2">It's the fastest speed allowed by the universe...</div>
-                <div id="msg3">Seriously.</div>
-                <div id="msg4">If you're in a hurry to get somewhere in space...</div>
-                <div id="msg5">you'll need to take it up with Mr. Einstein.</div>
+            <div id="pretty-empty" class="essay" style="left:8275px">Pretty empty out here.</div>
+            <div id="halfway-there" class="essay" style="left:500000px">Halfway there.</div>
+
+            <div id="the-fact-that" class="essay" style="left:1300000px">The fact that you're here, in the midst of all this
+                nothing, is pretty amazing when you stop and think about it.
+            </div>
+            <div id="congratulations-on-making" class="essay" style="left:1500000px">Congratulations on making it this
+                far.
             </div>
 
-            <div id="credit">
-                <a href="https://www.fzu.cz/domov" class="logolink">FZU (Akce link)</a>
-                <a href="https://www.fzu.cz/domov" target="_blank">
-                    <img src="img/logo-cs.svg">
-                </a>
-            </div>
+            <div class="essay" style="left:1700500px">
+                <span id="might-as-well">Might as well stop now.</span>
+                <span
+                        style="margin-left:300px">
+                <a href="http://www.joshworth.com">
+                    <span id="back-to-josh">Back to JoshWorth.com</span></a> &nbsp;|&nbsp; <a
+                        href="https://twitter.com/misterjworth"><span
+                        id="follow-me-on">Follow me on Twitter</span></a></span>
 
-            <div id="donate">
-            </div>
+                <!--  Event navigation <li><a href="#nameofclass" class="eventjump"><img src="img/image_symbol"></a></li>-->
+                <ul class="nav">
+                    <li><a href="#prevanchor" class="prevjump"><img src="img/jumpprev.svg"></a></li>
+                    <li><a href="#starttxt" class="eventjump"><img src="img/start_icon.png"></a></li>
+                    <li><a href="#endtxt" class="eventjump"><img src="img/end_icon.png"></a></li>
+                    <li><a href="#nextanchor" class="nextjump"><img src="img/jumpnext.svg"></a></li>
+                </ul>
 
-            <div id="langselect">
-                <img src="img/language-icon.svg">
-                <div id="langs">
-                    <ul>
-                        <li><a href="#cs">Čeština</a></li>
-                        <li><a href="#en">English</a></li>
-                    </ul>
+                <div id="distance-counter">
+                    <div id="counter"></div>
+                    <span id="selectarrow"><img src="img/select-arrow.svg"></span>
+                    <div id="unitselect">
+                        <ul>
+                            <li><a href="" id="km">km</a></li>
+                            <li><a href="" id="pixels">Pixels</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div id="lightspeeder"><a href=""><img src="img/lightspeed3.svg"><span class="warpfactor"> </span></a>
+                </div>
+
+                <div id="lightspeedmsg">
+                    <div id="msg1">This is how fast light travels...</div>
+                    <div id="msg2">It's the fastest speed allowed by the universe...</div>
+                    <div id="msg3">Seriously.</div>
+                    <div id="msg4">If you're in a hurry to get somewhere in space...</div>
+                    <div id="msg5">you'll need to take it up with Mr. Einstein.</div>
+                </div>
+
+                <div id="credit">
+                    <a href="https://www.fzu.cz/domov" class="logolink">FZU (Akce link)</a>
+                    <a href="https://www.fzu.cz/domov" target="_blank">
+                        <img src="img/logo-cs.svg">
+                    </a>
+                </div>
+
+                <div id="donate">
+                </div>
+
+                <div id="langselect">
+                    <img src="img/language-icon.svg">
+                    <div id="langs">
+                        <ul>
+                            <li><a href="#cs">Čeština</a></li>
+                            <li><a href="#en">English</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id=timepath2>
+        <div class="planetwrapper2">
+
+            <!--  -->
+            <div id="startwrap">
+                <svg version="1.1" id="start" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10">
+                    <circle cx="5" cy="5" r="5"></circle>
+                </svg>
+                <div id="starttxt" class="labeltext">
+                    START
+                </div>
+            </div>
+
+            <!--  -->
+            <div id="endwrap">
+                <svg version="1.1" id="end" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10">
+                    <circle cx="5" cy="5" r="5"></circle>
+                </svg>
+                <div id="endtxt">
+                    <span id="endlabel" class="labeltext">END</span><span style="font-size:.25em"><br/></span>
+                </div>
+            </div>
+
+            <div id="pretty-empty" class="essay" style="left:8275px">Pretty empty out here.</div>
+            <div id="halfway-there" class="essay" style="left:500000px">Halfway there.</div>
+
+            <div id="the-fact-that" class="essay" style="left:1300000px">The fact that you're here, in the midst of all this
+                nothing, is pretty amazing when you stop and think about it.
+            </div>
+            <div id="congratulations-on-making" class="essay" style="left:1500000px">Congratulations on making it this
+                far.
+            </div>
+
+            <div class="essay" style="left:1700500px">
+                <span id="might-as-well">Might as well stop now.</span>
+                <span
+                        style="margin-left:300px">
+                <a href="http://www.joshworth.com">
+                    <span id="back-to-josh">Back to JoshWorth.com</span></a> &nbsp;|&nbsp; <a
+                        href="https://twitter.com/misterjworth"><span
+                        id="follow-me-on">Follow me on Twitter</span></a></span>
+
+                <!--  Event navigation <li><a href="#nameofclass" class="eventjump"><img src="img/image_symbol"></a></li>-->
+                <ul class="nav">
+                    <li><a href="#prevanchor" class="prevjump"><img src="img/jumpprev.svg"></a></li>
+                    <li><a href="#starttxt" class="eventjump"><img src="img/start_icon.png"></a></li>
+                    <li><a href="#endtxt" class="eventjump"><img src="img/end_icon.png"></a></li>
+                    <li><a href="#nextanchor" class="nextjump"><img src="img/jumpnext.svg"></a></li>
+                </ul>
+
+                <div id="distance-counter">
+                    <div id="counter"></div>
+                    <span id="selectarrow"><img src="img/select-arrow.svg"></span>
+                    <div id="unitselect">
+                        <ul>
+                            <li><a href="" id="km">km</a></li>
+                            <li><a href="" id="pixels">Pixels</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div id="lightspeeder"><a href=""><img src="img/lightspeed3.svg"><span class="warpfactor"> </span></a>
+                </div>
+
+                <div id="lightspeedmsg">
+                    <div id="msg1">This is how fast light travels...</div>
+                    <div id="msg2">It's the fastest speed allowed by the universe...</div>
+                    <div id="msg3">Seriously.</div>
+                    <div id="msg4">If you're in a hurry to get somewhere in space...</div>
+                    <div id="msg5">you'll need to take it up with Mr. Einstein.</div>
+                </div>
+
+                <div id="credit">
+                    <a href="https://www.fzu.cz/domov" class="logolink">FZU (Akce link)</a>
+                    <a href="https://www.fzu.cz/domov" target="_blank">
+                        <img src="img/logo-cs.svg">
+                    </a>
+                </div>
+
+                <div id="donate">
+                </div>
+
+                <div id="langselect">
+                    <img src="img/language-icon.svg">
+                    <div id="langs">
+                        <ul>
+                            <li><a href="#cs">Čeština</a></li>
+                            <li><a href="#en">English</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 
 <script type="text/javascript"
@@ -133,4 +243,5 @@
 <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 <script type="text/javascript" src="js/l10n.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/buttons.js"></script>
 </html>

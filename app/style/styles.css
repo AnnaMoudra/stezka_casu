@@ -301,15 +301,75 @@ img, img a {
 }
 
 
-#timepath {
+
+#path_container{
     position: absolute;
     left: 2400px;
-    background-color: #17171a;
+    background-color: #feff4c;
+    background-position: left bottom;
+    width: 1600000px;
+    height: 99.9%;
+
+}
+
+#upper_panel{
+    position: relative;
+    left: 0px;
+    background-color: #262727;
+    background-position: left bottom;
+    width: 1600000px;
+    height: 5%;
+}
+
+.path_switcher{
+    position: fixed;
+    margin-top: 0;
+    top: 1%;
+    left: 85%;
+    width: 95px;
+    height: 30px;
+}
+
+.path_switcher button{
+    display: inline-block;
+    position: relative;
+    width: 29.0%;
+    height: 95%;
+    background-color: #ffca66;
+}
+
+.path_switcher button:hover{
+    background-color: #ffa646;
+}
+
+
+button.activebutton{
+    background-color: rgb(255, 48, 60);
+}
+
+#timepath {
+    position: relative;
+    left: 0px;
+    background-color: #262727;
     background-image: url(../img/ticks_white.png);
     background-repeat: repeat-x;
     background-position: left bottom;
     width: 1600000px;
-    height: 99.9%
+    height: 47.5%;
+    transition: height 500ms ease-out;
+}
+
+
+#timepath2 {
+    position: relative;
+    left: 0px;
+    background-color: #262727;
+    background-image: url(../img/ticks_white.png);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    width: 1600000px;
+    height: 47.5%;
+    transition: height 500ms ease-out;
 }
 
 .labeltext {

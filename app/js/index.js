@@ -35,6 +35,8 @@ $(document).ready(function () {
         e.preventDefault();
     });
 });
+
+
 $(function () {
     if (typeof window.performance === 'undefined') {
         window.performance = {};
