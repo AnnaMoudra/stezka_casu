@@ -1,0 +1,371 @@
+@charset "UTF-8";
+body {
+    background-color: #17171a;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    font-family: gotham ssm a, gotham ssm b, sans-serif, helvetica neue, Helvetica, Arial;
+    font-weight: 400;
+    font-style: normal
+}
+
+img, img a {
+    border: none
+}
+
+.essay {
+    position: absolute;
+    font-size: .9em;
+    color: #444352
+}
+
+.essay a {
+    color: #444352;
+    text-decoration: none
+}
+
+#distance-counter, #langselect, #donate {
+    position: fixed;
+    display: inline;
+    text-align: right;
+    color: #444352
+}
+
+#distance-counter {
+    height: 20px;
+    text-align: right;
+    top: 90%;
+    right: 47%;
+    margin-left: -60px
+}
+
+#langselect {
+    height: 20px;
+    width: 120px;
+    top: 16px;
+    left: 90%;
+    margin-left: -60px;
+    z-index: 10
+}
+
+#donate {
+    width: 80px;
+    top: 14px;
+    left: 90%;
+    margin-left: -80px;
+    z-index: 11;
+    opacity: .7
+}
+
+#langselect img {
+    opacity: .7;
+    height: 24px;
+    width: 24px;
+    cursor: pointer
+}
+
+#langselect ul {
+    position: relative;
+    top: -18px
+}
+
+#counter {
+    font-size: 13px;
+    display: inline;
+    cursor: pointer
+}
+
+#selectarrow img {
+    display: inline;
+    opacity: .7;
+    height: 9px;
+    width: 9px;
+    margin-left: 4px;
+    cursor: pointer
+}
+
+#unitselect {
+    position: relative;
+    top: -75px;
+    display: none
+}
+
+#langs {
+    display: none
+}
+
+#unitselect li, #langselect li {
+    list-style-type: none;
+    background: #17171a;
+    padding: 2px 0
+}
+
+#unitselect li a, #langselect li a {
+    font-size: 13px;
+    padding: 6px 4px;
+    list-style-type: none;
+    color: #aaa;
+    text-decoration: none;
+}
+
+#unitselect li:hover > a, #langselect li:hover > a {
+    color: #fff
+}
+
+#credit {
+    position: fixed;
+    display: inline;
+    text-align: left;
+    width: 200px;
+    top: 12px;
+    left: 20px
+}
+
+#credit a.logolink {
+    position: absolute;
+    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+    color: #8f8f8f;
+    text-decoration: none;
+    margin-top: 8px
+}
+
+#credit img {
+    position: absolute;
+    height: 28px;
+    margin-left: 100px;
+    opacity: 100%;
+}
+
+.nav {
+    position: fixed;
+    width: 500px;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    margin-left: -250px
+}
+
+.nav li {
+    display: inline;
+    margin: 10px;
+    list-style-type: none
+}
+
+.nav li img {
+    height: 15px;
+    width: 15px;
+    opacity: .7
+}
+
+.nav li img:hover {
+    opacity: 1
+}
+
+#lightspeeder {
+    position: fixed;
+    width: 120px;
+    height: 50px;
+    top: 90%;
+    left: 99%;
+    margin-left: -80px;
+    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+    color: #aaa
+}
+
+#lightspeeder a {
+    opacity: .7;
+    color: #aaa;
+    text-decoration: none
+}
+
+#lightspeeder a:hover {
+    opacity: 1
+}
+
+#lightspeedmsg {
+    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #e8e8e8;
+    text-align: right;
+    position: fixed;
+    width: 400px;
+    height: 40px;
+    top: 90%;
+    right: 5%;
+    margin-left: -240px;
+    margin-top: -40px;
+    display: none
+}
+
+#msg1, #msg2, #msg3, #msg4, #msg5 {
+    display: none;
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 6px
+}
+
+#lightspeeder img {
+    margin-top: -16px;
+    height: 44px;
+    width: 44px
+}
+
+.warpfactor {
+    position: relative;
+    top: -18px
+}
+
+#reloader {
+    position: fixed;
+    width: 20px;
+    top: 90%;
+    left: 99%;
+    margin-left: -100px;
+    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+    color: #aaa
+}
+
+#reloader a {
+    opacity: .7;
+    color: #aaa;
+    text-decoration: none
+}
+
+#reloader a:hover {
+    opacity: 1
+}
+
+#introwrap {
+    float: left;
+    display: inline
+}
+
+#titlecard {
+    float: left;
+    position: relative;
+    height: 80vh;
+    width: 100vh;
+    z-index: 4
+}
+
+#titlecard img {
+    position: relative;
+    height: 100%;
+    top: 10%;
+    margin-left: 10%
+}
+
+.scalewrap {
+    float: right;
+    height: 100%;
+    margin-left: 1500px;
+    z-index: 5
+}
+
+#scaleimg {
+    z-index: 9
+}
+
+.scalewrap img {
+    position: absolute;
+    top: 50vh;
+    margin-top: -250px;
+    height: 500px;
+    width: 500px
+}
+
+#navblocker {
+    position: absolute;
+    background-color: #129274;
+    height: 99%;
+    width: 2000px;
+    margin-left: 200px;
+    z-index: 1
+}
+
+.planetwrapper {
+    position: relative;
+    top: 40%
+}
+
+
+#timepath {
+    position: absolute;
+    left: 2400px;
+    background-color: #17171a;
+    background-image: url(../img/ticks_white.png);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    width: 1600000px;
+    height: 99.9%
+}
+
+.labeltext {
+    position: absolute;
+    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2em;
+    color: #eaeaea;
+    text-transform: uppercase
+}
+
+#startwrap {
+    left: -100px;
+    position: absolute;
+    top: -50px;
+    z-index: 2
+}
+
+#start {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    fill: #54fd87
+}
+
+#starttxt {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    top: 84px;
+    color: #444352;
+    font-size: 2em
+}
+
+#endwrap {
+    background-color: #45b9ff;
+    left: 1000000px;
+    position: absolute;
+    top: -50px;
+    z-index: 2
+}
+
+#endtxt {
+    position: relative;
+    width: 200px;
+    color: #c5e3ff;
+    font-size: 2em;
+    left: 0px;
+}
+#end {
+    position: relative;
+    left: 10px;
+    padding-left: -100px;
+    height: 100px;
+    width: 100px;
+    fill: #da56ed;
+
+}
