@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-    background-color: #17171a;
+    background-color: #262727;
     margin: 0;
     padding: 0;
     overflow-y: hidden;
@@ -24,19 +24,33 @@ img, img a {
     text-decoration: none
 }
 
-#distance-counter, #langselect, #donate {
+#langselect{
     position: fixed;
     display: inline;
     text-align: right;
-    color: #00ad8c
+    color: #00ad8c;
+    z-index:999;
 }
 
-#distance-counter {
-    height: 20px;
+.distance-counter{
+    position: fixed;
+    display: inline;
     text-align: right;
     top: 90%;
+    color: #00ad8c;
+    z-index:999;
+    height: 20px;
+    text-align: right;
     right: 47%;
     margin-left: -60px
+}
+
+#distance-counter1 {
+
+}
+
+#distance-counter2 {
+
 }
 
 #langselect {
@@ -115,26 +129,17 @@ img, img a {
     position: fixed;
     display: inline;
     text-align: left;
-    width: 200px;
-    top: 12px;
-    left: 20px
-}
-
-#credit a.logolink {
-    position: absolute;
-    font-family: Work Sans,sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-    color: #8f8f8f;
-    text-decoration: none;
-    margin-top: 8px
+    width: 20em;
+    height: 2em;
+    top: 1%;
+    left: 2%;
+    text-align: center;
 }
 
 #credit img {
-    position: absolute;
-    height: 28px;
-    margin-left: 100px;
+    display: inline-block;
+    margin-right: 2em;
+    height: 95%;
     opacity: 1.0;
 }
 

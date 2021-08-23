@@ -1,7 +1,7 @@
 console.log("Button js loaded");
 
 var button = document.getElementById('button_both_paths');
-//button.classList.add('activebutton');
+button.classList.add('activebutton');
 
 $(function () {
     $('#button_both_paths').on('click', function (e) {
