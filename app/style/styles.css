@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: hidden;
-    font-family: gotham ssm a, gotham ssm b, sans-serif, helvetica neue, Helvetica, Arial;
+    font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal
 }
@@ -28,7 +28,7 @@ img, img a {
     position: fixed;
     display: inline;
     text-align: right;
-    color: #444352
+    color: #00ad8c
 }
 
 #distance-counter {
@@ -40,33 +40,32 @@ img, img a {
 }
 
 #langselect {
-    height: 20px;
-    width: 120px;
-    top: 16px;
+    position: fixed;
+    top: 1%;
     left: 90%;
-    margin-left: -60px;
-    z-index: 10
+    height: 1.6em;
+    width: 5em;
+    z-index: 10;
 }
 
-#donate {
-    width: 80px;
-    top: 14px;
-    left: 90%;
-    margin-left: -80px;
-    z-index: 11;
-    opacity: .7
+#langselect img{
+     position: relative;
+     opacity: 0.5;
+     background-color: rgba(213, 210, 210, 0.2);
+     border: 1px solid #d0d5d3;
+     border-radius: 15%;
+     height: 90%;
+     cursor: pointer
+ }
+
+#langselect img:hover{
+    border: 1px solid #00ad8c;
 }
 
-#langselect img {
-    opacity: .7;
-    height: 24px;
-    width: 24px;
-    cursor: pointer
-}
 
 #langselect ul {
     position: relative;
-    top: -18px
+    top: -18px;
 }
 
 #counter {
@@ -96,7 +95,7 @@ img, img a {
 
 #unitselect li, #langselect li {
     list-style-type: none;
-    background: #17171a;
+    background: rgba(23, 23, 26, 0.01);
     padding: 2px 0
 }
 
@@ -104,7 +103,7 @@ img, img a {
     font-size: 13px;
     padding: 6px 4px;
     list-style-type: none;
-    color: #aaa;
+    color: #00ad8c;
     text-decoration: none;
 }
 
@@ -123,7 +122,7 @@ img, img a {
 
 #credit a.logolink {
     position: absolute;
-    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 11px;
@@ -136,7 +135,7 @@ img, img a {
     position: absolute;
     height: 28px;
     margin-left: 100px;
-    opacity: 100%;
+    opacity: 1.0;
 }
 
 .nav {
@@ -171,7 +170,7 @@ img, img a {
     top: 90%;
     left: 99%;
     margin-left: -80px;
-    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 11px;
@@ -189,7 +188,7 @@ img, img a {
 }
 
 #lightspeedmsg {
-    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
@@ -230,7 +229,7 @@ img, img a {
     top: 90%;
     left: 99%;
     margin-left: -100px;
-    font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
+    font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 11px;
@@ -288,7 +287,7 @@ img, img a {
 
 #navblocker {
     position: absolute;
-    background-color: #129274;
+    background-color: #00ad8c;
     height: 99%;
     width: 2000px;
     margin-left: 200px;
@@ -319,32 +318,60 @@ img, img a {
     background-position: left bottom;
     width: 1600000px;
     height: 5%;
+    text-align: center;
 }
 
 .path_switcher{
     position: fixed;
-    margin-top: 0;
     top: 1%;
-    left: 85%;
-    width: 95px;
-    height: 30px;
+    left: 75%;
+    width: 5.5em;
+    height: 1.6em;
 }
 
 .path_switcher button{
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    cursor: pointer;
     display: inline-block;
-    position: relative;
-    width: 29.0%;
-    height: 95%;
-    background-color: #ffca66;
+    margin-left: 0;
+    padding-right: 0;
+    width: 27.0%;
+    height: 90%;
+    opacity: 0.5;
+    background-color: rgba(213, 210, 210, 0.2);
+    border: 1px solid #d0d5d3;
+    border-radius: 15%;
+}
+
+#button_lower_path{
+    background-image: url('../img/switch_buttons_lower.png');
+}
+
+#button_upper_path{
+    background-image: url('../img/switch_buttons_upper.png');
+}
+
+#button_both_paths{
+    background-image: url('../img/switch_buttons_both.png');
 }
 
 .path_switcher button:hover{
-    background-color: #ffa646;
+    border: 1px solid #d50054;
+    background-color: rgba(213, 0, 84, 0.40);
 }
 
-
 button.activebutton{
-    background-color: rgb(255, 48, 60);
+    background-color: rgba(213, 0, 84, 0.60);
+    border: 1px solid #d50054;
+}
+
+.path_switcher button img{
+    display: inline;
+    margin-left: -7px;
+    height: 95%;
+    opacity: inherit;
 }
 
 #timepath {
