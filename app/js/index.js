@@ -204,12 +204,15 @@ function cancelLightMsg() {
 };
 
 function updateDistance() {
-    var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 2);
+    var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 1.9);
     var distance = px * unitTable[unit];
+    distance -= $(window).width()*1.5;
+    console.log("distance", distance)
     $('#counter').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname);
 
-    var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 2);
+    var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 1.9);
     var distance = px * unitTable[unit2];
+    distance -= $(window).width()*1.5;
     $('#counter2').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname2);
 }
 

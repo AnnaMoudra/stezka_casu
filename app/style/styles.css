@@ -68,12 +68,12 @@ img, img a {
 
 #distance-counter1{
      top: 45%;
-     left: 47%;
+     left: 50%;
  }
 
 #distance-counter2{
     top: 93%;
-    left: 47%;
+    left: 50%;
 }
 
 .counter {
@@ -381,27 +381,23 @@ button.activebutton{
     opacity: inherit;
 }
 
-#timepath {
+.timepath{
     position: relative;
     left: 0px;
     background-color: #262727;
     background-image: url(../img/ticks_white.png);
     background-repeat: repeat-x;
     background-position: left bottom;
-    width: 1600000px;
+    width: 1000000px;
+}
+
+#timepath {
     height: 47.5%;
     transition: height 500ms ease-out, opacity 0s ease-out 500ms, visibility 0s ease-out 600ms;
 }
 
 
 #timepath2 {
-    position: relative;
-    left: 0px;
-    background-color: #262727;
-    background-image: url(../img/ticks_white.png);
-    background-repeat: repeat-x;
-    background-position: left bottom;
-    width: 1600000px;
     height: 47.5%;
     transition: height 500ms ease-out, opacity 500s ease-in, visibility 0s ease-out 500ms;
 }
@@ -441,11 +437,42 @@ button.activebutton{
 }
 
 #endwrap {
-    background-color: #45b9ff;
     left: 1000000px;
+    margin-right: 0;
     position: absolute;
-    top: -50px;
+    top: 0%;
+    width: 40px;
+    height: 100%;
     z-index: 2
+}
+
+.endline{
+    position: relative;
+    height: 100%;
+    width: 2px;
+    opacity: 0.8;
+}
+
+#endline1{
+    background-color: #00ad8c;
+    animation: change_colors 5s infinite;
+}
+
+#endline2{
+    background-color: #d50054;
+    animation: change_colors_rev 5s infinite;
+}
+
+@keyframes change_colors {
+    0% {background-color: #00ad8c;}
+    50% {background-color: #d50054;}
+    100% {background-color: #00ad8c;}
+}
+
+@keyframes change_colors_rev {
+    0% {background-color: #d50054;}
+    50% {background-color: #00ad8c;}
+    100% {background-color: #d50054;}
 }
 
 #endtxt {
