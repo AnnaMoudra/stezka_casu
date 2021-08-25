@@ -1,29 +1,29 @@
 var lightspeed = 299792
-var _1km = 3474.8
-var unit = 'km'
+var _1unit = 1
+var unit = 'μs'
+var unit2 = 'ps'
 var delimeter = ','
 var decimalmark = '.'
-var unitname = 'km'
+var unitname = 'μs'
+var unitname2 = 'ps'
 var language = languages.Čeština
 var currentRAFID = 0
 var isSpeeding = 0
 var unitTable = {
+    μs: 1,
+    ms: 0.001,
+    ps: 1,
+    ns: 0.001,
+    s: 0.000001,
     km: 1,
-    mi: 0.621371,
-    au: 6.68458712e-9,
     lightminutes: 0.0000000555941,
-    earths: 0.0000785238,
-    buses: 79.36,
-    bluewhales: 33.3333,
-    greatwalls: 0.00011297137305,
     pixels: 0.0002877863474156786
 }
+
 var msgTimer
 var msgNum = [$('#msg1'), $('#msg2'), $('#msg3'), $('#msg4'), $('#msg5')]
 var msgIndex = 0
 var startX = window.pageXOffset
-
-console.log("Page loaded");
 
 $(document).ready(function () {
     $('html, body').mousewheel(function (e, delta) {
@@ -35,6 +35,9 @@ $(document).ready(function () {
         e.preventDefault();
     });
 });
+
+//updateDistance('ms','ms','#counter');
+//updateDistance('ps','ps','#counter2');
 
 
 $(function () {
@@ -95,16 +98,34 @@ $(function () {
         $('html, body').stop().animate({scrollLeft: destinationNext}, 4500, 'easeInOutQuad');
         event.preventDefault();
     })
-    $('#distance-counter').on('click', function (e) {
-        var $units = $('#unitselect')
-        $units.css('display', $units.css('display') == 'none' ? 'block' : 'none')
+    $('#distance-counter1').on('click', function (e) {
+        var units = $(this).find('.unitselect')
+        console.log('units', units[0])
+        units.css('display', units.css('display') == 'none' ? 'block' : 'none')
     })
-    $('#unitselect li').on('click', function (e) {
-        unit = $(e.target).attr('id')
-        unitname = $(e.target).text()
+
+    $('#distance-counter2').on('click', function (e) {
+        var units = $(this).find('.unitselect')
+        console.log('units', units[0])
+        units.css('display', units.css('display') == 'none' ? 'block' : 'none')
+    })
+
+    $('.unitselect li').on('click', function (e) {
+        //check for timepath id
+        var counter_div = e.target.parentNode.parentNode.parentNode.parentNode;
+        if(counter_div.id ==  "distance-counter1"){
+            console.log("Parent id:", counter_div.id)
+            unit = $(e.target).attr('class')
+            unitname = $(e.target).text()
+        }
+        else{
+            unit2 = $(e.target).attr('class')
+            unitname2 = $(e.target).text()
+        }
         updateDistance()
-        $('#unitselect').css('display', 'none')
+        $('.unitselect').css('display', 'none')
         return false
+
     })
     $('#langselect').on('click', function (e) {
         var $lang = $('#langs')
@@ -157,11 +178,6 @@ function startSpeedingAt() {
     return requestAnimationFrame(onEnterFrame)
 }
 
-function changeUnitToLight() {
-    unit = 'lightminutes'
-    unitname = $('#lightminutes').text()
-    updateDistance()
-};
 
 function fadeInLightMsg() {
     msgNum[msgIndex].fadeIn(500)
@@ -189,9 +205,12 @@ function cancelLightMsg() {
 
 function updateDistance() {
     var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 2);
-    var km = px * _1km;
-    var distance = km * unitTable[unit];
-    $('#counter').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + $('#' + unit).text());
+    var distance = px * unitTable[unit];
+    $('#counter').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname);
+
+    var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 2);
+    var distance = px * unitTable[unit2];
+    $('#counter2').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname2);
 }
 
 function stopSpeeding() {

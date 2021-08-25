@@ -27,68 +27,62 @@ img, img a {
 #langselect{
     position: fixed;
     display: inline;
-    text-align: right;
+    text-align: center;
     color: #00ad8c;
     z-index:999;
-}
-
-.distance-counter{
-    position: fixed;
-    display: inline;
-    text-align: right;
-    top: 90%;
-    color: #00ad8c;
-    z-index:999;
-    height: 20px;
-    text-align: right;
-    right: 47%;
-    margin-left: -60px
-}
-
-#distance-counter1 {
-
-}
-
-#distance-counter2 {
-
-}
-
-#langselect {
-    position: fixed;
     top: 1%;
     left: 90%;
     height: 1.6em;
     width: 5em;
-    z-index: 10;
 }
 
 #langselect img{
-     position: relative;
-     opacity: 0.5;
-     background-color: rgba(213, 210, 210, 0.2);
-     border: 1px solid #d0d5d3;
-     border-radius: 15%;
-     height: 90%;
-     cursor: pointer
- }
+    position: relative;
+    opacity: 0.5;
+    background-color: rgba(213, 210, 210, 0.2);
+    border: 1px solid #d0d5d3;
+    border-radius: 15%;
+    height: 90%;
+    cursor: pointer;
+}
 
 #langselect img:hover{
     border: 1px solid #00ad8c;
 }
-
 
 #langselect ul {
     position: relative;
     top: -18px;
 }
 
-#counter {
-    font-size: 13px;
+.distance-counter{
+    position: fixed;
+    display: inline;
+    color: #00ad8c;
+    z-index:10;
+    height: 20px;
+    text-align: right;
+    margin-left: 0px;
+    transition: opacity 300ms ease-out;
+}
+
+#distance-counter1{
+     top: 45%;
+     left: 47%;
+ }
+
+#distance-counter2{
+    top: 93%;
+    left: 47%;
+}
+
+.counter {
+    font-size: 0.8em;
     display: inline;
     cursor: pointer
 }
 
-#selectarrow img {
+.selectarrow img {
     display: inline;
     opacity: .7;
     height: 9px;
@@ -97,31 +91,33 @@ img, img a {
     cursor: pointer
 }
 
-#unitselect {
+.unitselect {
     position: relative;
-    top: -75px;
-    display: none
+    margin-top: -8em;
+    display: none;
+    text-align: end;
 }
 
 #langs {
     display: none
 }
 
-#unitselect li, #langselect li {
+.unitselect li, #langselect li {
     list-style-type: none;
     background: rgba(23, 23, 26, 0.01);
     padding: 2px 0
 }
 
-#unitselect li a, #langselect li a {
-    font-size: 13px;
+.unitselect li a, #langselect li a {
+    font-size: 0.8em;
     padding: 6px 4px;
     list-style-type: none;
     color: #00ad8c;
+    font-family: Work Sans,sans-serif;
     text-decoration: none;
 }
 
-#unitselect li:hover > a, #langselect li:hover > a {
+.unitselect li:hover > a, #langselect li:hover > a {
     color: #fff
 }
 
@@ -129,17 +125,16 @@ img, img a {
     position: fixed;
     display: inline;
     text-align: left;
-    width: 20em;
-    height: 2em;
+    height: 2.2em;
     top: 1%;
-    left: 2%;
+    left: 5%;
     text-align: center;
 }
 
 #credit img {
     display: inline-block;
     margin-right: 2em;
-    height: 95%;
+    height: 90%;
     opacity: 1.0;
 }
 
@@ -293,37 +288,44 @@ img, img a {
 #navblocker {
     position: absolute;
     background-color: #00ad8c;
-    height: 99%;
-    width: 2000px;
-    margin-left: 200px;
-    z-index: 1
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+    z-index: 15;
+    scroll-behavior: smooth;
+}
+
+#introblocker {
+    position: absolute;
+    background-color: #262727;
+    height: 100%;
+    width: 150%;
+    margin-left: 0px;
+    z-index: 14;
+    opacity: 0.5;
+    scroll-behavior: smooth;
 }
 
 .planetwrapper {
     position: relative;
-    top: 40%
+    height: 100%;
+    top: 0%
 }
-
-
 
 #path_container{
     position: absolute;
-    left: 2400px;
-    background-color: #feff4c;
-    background-position: left bottom;
+    left: 150%;
     width: 1600000px;
     height: 99.9%;
-
 }
 
 #upper_panel{
     position: relative;
-    left: 0px;
-    background-color: #262727;
-    background-position: left bottom;
+    left: 100%;
     width: 1600000px;
-    height: 5%;
+    height: 2.5em;
     text-align: center;
+    z-index: 1000;
 }
 
 .path_switcher{
@@ -388,7 +390,7 @@ button.activebutton{
     background-position: left bottom;
     width: 1600000px;
     height: 47.5%;
-    transition: height 500ms ease-out;
+    transition: height 500ms ease-out, opacity 0s ease-out 500ms, visibility 0s ease-out 600ms;
 }
 
 
@@ -401,7 +403,7 @@ button.activebutton{
     background-position: left bottom;
     width: 1600000px;
     height: 47.5%;
-    transition: height 500ms ease-out;
+    transition: height 500ms ease-out, opacity 500s ease-in, visibility 0s ease-out 500ms;
 }
 
 .labeltext {
@@ -415,9 +417,9 @@ button.activebutton{
 }
 
 #startwrap {
-    left: -100px;
-    position: absolute;
-    top: -50px;
+    left: 0px;
+    top: 30%;
+    position: relative;
     z-index: 2
 }
 
@@ -425,7 +427,8 @@ button.activebutton{
     position: relative;
     height: 200px;
     width: 200px;
-    fill: #54fd87
+    fill: rgba(0, 173, 140, 0.2);
+    border: #00ad8c 2px;
 }
 
 #starttxt {
@@ -433,7 +436,7 @@ button.activebutton{
     margin: 0 auto;
     width: 200px;
     top: 84px;
-    color: #444352;
+    color: #262727;
     font-size: 2em
 }
 

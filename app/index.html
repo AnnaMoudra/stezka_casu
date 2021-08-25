@@ -23,7 +23,8 @@
 </head>
 <body>
 <div id="introwrap">
-    <div id="navblocker" style="top:0px"></div>
+    <div id="navblocker"></div>
+    <div id="introblocker"></div>
     <div id="titlecard">
         <img src="img/maintitle-en.svg" id="titleimg"></div>
     <div class="scalewrap"><img src="img/scale-en.svg" id="scaleimg"></div>
@@ -40,11 +41,11 @@
 
         <div id="credit">
             <a href="https://www.nocvedcu.cz/" class="logolink" target="_blank"><img src="img/nocvedcu-hero.svg"></a>
-            <a href="https://www.fzu.cz/domov" target="_blank"><img src="img/FZU-L-U-RGB-WHITE.png"></a>
+            <a href="https://www.fzu.cz/domov" target="_blank"><img src="img/FZU-L-U-RGB-WHITE.svg"></a>
         </div>
 
         <div id="langselect">
-            <img src="./img/language_icon.svg">
+            <img src="./img/language_icon_w2.svg">
             <div id="langs">
                 <ul>
                     <li><a href="#cs">Čeština</a></li>
@@ -110,7 +111,7 @@
 
 
 
-                <div id="lightspeeder"><a href=""><img src="img/lightspeed3.svg"><span class="warpfactor"> </span></a>
+                <div id="lightspeeder"><a href=""><img src="img/speed.svg"><span class="warpfactor"> </span></a>
                 </div>
 
                 <div id="lightspeedmsg">
@@ -124,21 +125,23 @@
 
             </div>
         </div>
-        <div class=distance-counter id="distance-counter1">
-            <div id="counter"></div>
-            <span id="selectarrow"><img src="img/select-arrow.svg"></span>
-            <div id="unitselect">
+
+        <div class=distance-counter id="distance-counter1" style="opacity:0">
+            <div class="counter" id="counter"></div>
+            <span class="selectarrow"><img src="img/arrow_down.svg"></span>
+            <div class="unitselect">
                 <ul>
-                    <li><a href="" id="km">km</a></li>
-                    <li><a href="" id="pixels">Pixels</a></li>
+                    <li><a href="" class="μs">μs</a></li>
+                    <li><a href="" class="ms">ms</a></li>
+                    <li><a href="" class="s">s</a></li>
+                    <li><a href="" class="pixels">Pixels</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div id=timepath2>
-        <div class="planetwrapper2">
-
+        <div class="planetwrapper">
             <!--  -->
             <div id="startwrap">
                 <svg version="1.1" id="start" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -189,7 +192,7 @@
                 </ul>
 
 
-                <div id="lightspeeder"><a href=""><img src="img/lightspeed3.svg"><span class="warpfactor"> </span></a>
+                <div id="lightspeeder"><a href=""><img src="img/speed.svg"><span class="warpfactor"> </span></a>
                 </div>
 
                 <div id="lightspeedmsg">
@@ -201,13 +204,15 @@
                 </div>
             </div>
         </div>
-        <div class=distance-counter id="distance-counter2">
-            <div id="counter"></div>
-            <span id="selectarrow"><img src="img/select-arrow.svg"></span>
-            <div id="unitselect">
+        <div class=distance-counter id="distance-counter2" style="opacity:0">
+            <div class="counter" id="counter2"></div>
+            <span class="selectarrow"><img src="img/arrow_down.svg"></span>
+            <div class="unitselect">
                 <ul>
-                    <li><a href="" id="km">km</a></li>
-                    <li><a href="" id="pixels">Pixels</a></li>
+                    <li><a href="" class="ps">ps</a></li>
+                    <li><a href="" class="ns">ns</a></li>
+                    <li><a href="" class="ms">ms</a></li>
+                    <li><a href="" class="pixels">Pixels</a></li>
                 </ul>
             </div>
         </div>
@@ -224,4 +229,5 @@
 <script type="text/javascript" src="js/l10n.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/buttons.js"></script>
+<script type="text/javascript" src="js/counters.js"></script>
 </html>
