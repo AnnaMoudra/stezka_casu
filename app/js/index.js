@@ -226,8 +226,7 @@ function updateDistance() {
     if(unit == 'mm'){
         distance += $(window).width()*1.5;
     }
-
-    console.log("distance", distance)
+    
     $('#counter').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname);
 
     var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5 + counter_size2;

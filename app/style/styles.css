@@ -96,7 +96,6 @@ img, img a {
 .distance-counter{
     position: fixed;
     display: inline;
-
     z-index:10;
     height: 20px;
     text-align: right;
@@ -108,13 +107,14 @@ img, img a {
     color: #00ad8c;
     top: 45%;
     left: 50%;
-    transition: top 600ms ease-out;
+    transition: top 600ms ease-out, opacity 600ms ease-in-out;
  }
 
 #distance-counter2{
     color: #d50054;
     top: 93%;
     left: 50%;
+    transition: opacity 600ms ease-in-out;
 }
 
 .counter {
