@@ -1,4 +1,4 @@
-var lightspeed = 299792
+var lightspeed = 1000
 var _1unit = 1
 var unit = 'μs'
 var unit2 = 'ps'
@@ -16,6 +16,8 @@ var unitTable = {
     ns: 0.001,
     s: 0.000001,
     km: 1,
+    mm: 1,
+    blinks: 0.4,
     lightminutes: 0.0000000555941,
     pixels: 0.0002877863474156786
 }
@@ -141,11 +143,11 @@ $(function () {
         for (var translation in translations) {
             $('#' + translation).text(translations[translation][language])
         }
-        updateDistance()
-        return false
+        updateDistance();
+        return false;
     })
-    $('#lightspeeder a').on('click', function (e) {
-        console.log("Speeding");
+
+    $('#lightspeeder img').on('click', function (e) {
         stopSpeeding()
         if (isSpeeding == 1) {
             cancelLightMsg()
@@ -156,7 +158,7 @@ $(function () {
         else {
             isSpeeding = 1
             fadeInLightMsg()
-            changeUnitToLight()
+            changeUnitToSpeed()
             $('#lightspeeder a').css('opacity', 1.0)
             $('#lightspeedmsg').css('display', 'block')
             currentRAFID = startSpeedingAt()
@@ -165,13 +167,29 @@ $(function () {
     })
 });
 
+function changeUnitToSpeed() {
+    unit = 'mm'
+    unit2 = 'mm'
+    unitname = 'mm'//$('#lightminutes').text()
+    unitname2 = 'mm'
+    updateDistance()
+};
+
+function changeUnitToBlink() {
+    unit = 'blinks'
+    unit2 = 'blinks'
+    unitname = 'blinks'//$('#lightminutes').text()
+    unitname2 = 'blinks'
+    updateDistance()
+};
+
 function startSpeedingAt() {
     stopSpeeding()
     var startX = window.pageXOffset
     var lastTime = window.performance.now()
     var onEnterFrame = function (now) {
         var timeDelta = now - lastTime
-        var distance = (lightspeed * timeDelta) / (_1km * 1000)
+        var distance = (lightspeed * timeDelta) / (_1unit * 1000)
         $('html, body').scrollLeft(startX + distance)
         currentRAFID = requestAnimationFrame(onEnterFrame)
     }
@@ -206,6 +224,9 @@ function cancelLightMsg() {
 function updateDistance() {
     var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 1.9);
     var distance = px * unitTable[unit];
+    if(unit == 'mm'){
+        distance += $(window).width()*1.5;
+    }
     distance -= $(window).width()*1.5;
     console.log("distance", distance)
     $('#counter').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname);
@@ -213,6 +234,10 @@ function updateDistance() {
     var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 1.9);
     var distance = px * unitTable[unit2];
     distance -= $(window).width()*1.5;
+    if(unit2 == 'mm'){
+        distance += $(window).width()*1.5;
+        distance /= 1000000
+    }
     $('#counter2').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname2);
 }
 

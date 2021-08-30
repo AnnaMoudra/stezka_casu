@@ -6,7 +6,8 @@ body {
     overflow-y: hidden;
     font-family: Work Sans,sans-serif;
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
+    display: block;
 }
 
 img, img a {
@@ -32,7 +33,7 @@ img, img a {
     z-index:999;
     top: 1%;
     left: 90%;
-    height: 1.6em;
+    height: 1.55em;
     width: 5em;
 }
 
@@ -122,19 +123,19 @@ img, img a {
 }
 
 #credit {
-    position: fixed;
-    display: inline;
-    text-align: left;
-    height: 2.2em;
-    top: 1%;
-    left: 5%;
+    position: absolute;
+    display: inline-block;
+    top:5%;
+    height: 95%;
+    left: 2%;
+    margin-left:0;
     text-align: center;
 }
 
 #credit img {
     display: inline-block;
-    margin-right: 2em;
-    height: 90%;
+    height: 95%;
+    margin-left: 1em;
     opacity: 1.0;
 }
 
@@ -163,6 +164,12 @@ img, img a {
     opacity: 1
 }
 
+.bio-sine{
+    transform-style: preserve-3d;
+    transition: transform 800ms ease 0s;
+    transform: translateX(-74px) translateY(0px) translateZ(0px);
+}
+
 #lightspeeder {
     position: fixed;
     width: 120px;
@@ -177,14 +184,15 @@ img, img a {
     color: #aaa
 }
 
-#lightspeeder a {
+#lightspeeder img {
     opacity: .7;
     color: #aaa;
     text-decoration: none
 }
 
-#lightspeeder a:hover {
-    opacity: 1
+#lightspeeder img:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 #lightspeedmsg {
@@ -248,7 +256,8 @@ img, img a {
 
 #introwrap {
     float: left;
-    display: inline
+    display: inline;
+    height: 100%;
 }
 
 #titlecard {
@@ -256,7 +265,8 @@ img, img a {
     position: relative;
     height: 80vh;
     width: 100vh;
-    z-index: 4
+    z-index: 4;
+    background-color: #00ad8c;
 }
 
 #titlecard img {
@@ -288,6 +298,7 @@ img, img a {
 #navblocker {
     position: absolute;
     background-color: #00ad8c;
+    top: 5%;
     height: 100%;
     width: 100%;
     margin-left: 0px;
@@ -302,7 +313,7 @@ img, img a {
     width: 150%;
     margin-left: 0px;
     z-index: 14;
-    opacity: 0.5;
+    opacity: 1.0;
     scroll-behavior: smooth;
 }
 
@@ -316,24 +327,31 @@ img, img a {
     position: absolute;
     left: 150%;
     width: 1600000px;
-    height: 99.9%;
+    height: 100%;
+    top: 5%;
 }
 
 #upper_panel{
-    position: relative;
-    left: 100%;
-    width: 1600000px;
-    height: 2.5em;
+    position: fixed;
+    display: inline-block;
+    top: 0%;
+    width: 100%;
+    height: 5%;
+    min-height: 2em;
     text-align: center;
     z-index: 1000;
+    background-color: #222323;
+    border-bottom: 1px solid rgba(34, 35, 35, 0.47);
 }
 
 .path_switcher{
     position: fixed;
     top: 1%;
-    left: 75%;
+    left: 85%;
     width: 5.5em;
     height: 1.6em;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
 }
 
 .path_switcher button{
@@ -393,13 +411,16 @@ button.activebutton{
 
 #timepath {
     height: 47.5%;
-    transition: height 500ms ease-out, opacity 0s ease-out 500ms, visibility 0s ease-out 600ms;
+    border-bottom: 1px solid #00ad8c;
+    transition: height 500ms ease-in-out, opacity 400ms ease-in, visibility 400ms ease-in-out 400ms
 }
 
 
 #timepath2 {
     height: 47.5%;
-    transition: height 500ms ease-out, opacity 500s ease-in, visibility 0s ease-out 500ms;
+    border-bottom: 1px solid #d50054;
+    transition: height 500ms ease-in-out, opacity 400ms ease-in, visibility 400ms ease-in-out 400ms;
+
 }
 
 .labeltext {
@@ -450,7 +471,7 @@ button.activebutton{
     position: relative;
     height: 100%;
     width: 2px;
-    opacity: 0.8;
+    opacity: 0.15;
 }
 
 #endline1{
