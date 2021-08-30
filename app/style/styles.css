@@ -14,10 +14,47 @@ img, img a {
     border: none
 }
 
+
+.pointline{
+    position: absolute;
+    top:40%;
+    height: 100%;
+    width: 1px;
+    opacity: 0.2;
+    background-color: #00ad8c;
+    animation: change_colors 5s infinite;
+}
+
 .essay {
     position: absolute;
-    font-size: .9em;
-    color: #444352
+    font-size: 1em;
+    top: 45%;
+    color: rgba(213, 0, 84, 0.63)
+}
+
+.essay1 {
+    position: absolute;
+    font-size: 1em;
+    top: 45%;
+    margin-left: 0.5em;
+    color: #aeb0b4
+}
+
+
+.note1 {
+    position: absolute;
+    font-size: 0.8em;
+    top: 37%;
+    margin-left: -0.4em;
+    color: #008468
+}
+
+.note2 {
+    position: absolute;
+    font-size: 0.8em;
+    top: 37%;
+    margin-left: -0.4em;
+    color: #bb0042
 }
 
 .essay a {
@@ -59,7 +96,7 @@ img, img a {
 .distance-counter{
     position: fixed;
     display: inline;
-    color: #00ad8c;
+
     z-index:10;
     height: 20px;
     text-align: right;
@@ -68,11 +105,14 @@ img, img a {
 }
 
 #distance-counter1{
-     top: 45%;
-     left: 50%;
+    color: #00ad8c;
+    top: 45%;
+    left: 50%;
+    transition: top 600ms ease-out;
  }
 
 #distance-counter2{
+    color: #d50054;
     top: 93%;
     left: 50%;
 }
@@ -181,7 +221,8 @@ img, img a {
     font-weight: 400;
     font-style: normal;
     font-size: 11px;
-    color: #aaa
+    color: #aaa;
+    z-index: 10;
 }
 
 #lightspeeder img {
@@ -313,7 +354,7 @@ img, img a {
     width: 150%;
     margin-left: 0px;
     z-index: 14;
-    opacity: 1.0;
+    opacity: 0;
     scroll-behavior: smooth;
 }
 

@@ -10,6 +10,7 @@ $(function () {
         console.log("button both click: default");
         RollDownTimepath('timepath',"47.5%")
         RollDownTimepath('timepath2',"47.5%")
+        document.getElementById('distance-counter1').style.top= "45%";
         document.getElementById('button_lower_path').classList.remove('activebutton');
         document.getElementById('button_upper_path').classList.remove('activebutton');
         document.getElementById('button_both_paths').classList.add('activebutton');
@@ -28,6 +29,7 @@ $(function () {
     $('#button_upper_path').on('click', function (e) {
         RollUpTimepath('timepath2')
         RollDownTimepath('timepath',"95%")
+        document.getElementById('distance-counter1').style.top= "93%";
         document.getElementById('button_lower_path').classList.remove('activebutton');
         document.getElementById('button_both_paths').classList.remove('activebutton');
         document.getElementById('button_upper_path').classList.add('activebutton');
@@ -59,7 +61,7 @@ $(window).scroll(function () {
     /* Check the location of each desired element */
     $('.path_switcher').each(function (i) {
         var obj_left = window.pageXOffset;
-        var offset = $(window).width() * 1.25;
+        var offset = $(window).width() * 1.1;
 
         /* If the object is completely visible in the window, fade it it */
         if (offset < obj_left && visible_buttons == false) {

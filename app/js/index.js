@@ -12,9 +12,9 @@ var isSpeeding = 0
 var unitTable = {
     μs: 1,
     ms: 0.001,
+    s: 0.000001,
     ps: 1,
     ns: 0.001,
-    s: 0.000001,
     km: 1,
     mm: 1,
     blinks: 0.4,
@@ -37,10 +37,6 @@ $(document).ready(function () {
         e.preventDefault();
     });
 });
-
-//updateDistance('ms','ms','#counter');
-//updateDistance('ps','ps','#counter2');
-
 
 $(function () {
     if (typeof window.performance === 'undefined') {
@@ -66,7 +62,7 @@ $(function () {
     $('.essay').each(function () {
         essayMarks.push($(this).offset().left - 200)
     });
-    var planetMarks = [$('#starttxt').offset().left, $('#endtxt').offset().left,];
+    var planetMarks = [$('#path_container').offset().left, $('#endtxt').offset().left,];
     var destinations = $.makeArray(essayMarks).concat($.makeArray(planetMarks));
     destinations.sort(function (a, b) {
         return a - b
@@ -222,19 +218,27 @@ function cancelLightMsg() {
 };
 
 function updateDistance() {
-    var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 1.9);
+    var counter_size1 = $('#distance-counter1').width() - 3;
+    var counter_size2 = $('#distance-counter2').width() - 3;
+    var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5 + counter_size1;
+    //px -= $(window).width()*1.5;
     var distance = px * unitTable[unit];
     if(unit == 'mm'){
         distance += $(window).width()*1.5;
     }
-    distance -= $(window).width()*1.5;
+
     console.log("distance", distance)
     $('#counter').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname);
 
-    var px = (window.pageXOffset - $('#timepath').position().left + $(window).width() / 1.9);
+    var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5 + counter_size2;
     var distance = px * unitTable[unit2];
-    distance -= $(window).width()*1.5;
+    //distance -= $(window).width()*1.5;
+
     if(unit2 == 'mm'){
+        distance += $(window).width()*1.5;
+        distance /= 1000000
+    }
+    if(unit2 == 'μs'){
         distance += $(window).width()*1.5;
         distance /= 1000000
     }
