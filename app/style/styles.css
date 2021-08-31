@@ -224,33 +224,54 @@ img, img a {
     transform: translateX(-74px) translateY(0px) translateZ(0px);
 }
 
-#lightspeeder {
+
+#speeder {
     position: fixed;
     width: 120px;
     height: 50px;
     top: 90%;
     left: 99%;
-    margin-left: -80px;
+    margin-left: -5em;
     font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 11px;
-    color: #aaa;
     z-index: 10;
 }
 
-#lightspeeder img {
-    opacity: .7;
-    color: #aaa;
-    text-decoration: none
-}
-
-#lightspeeder img:hover {
-    opacity: 1;
+#speeder button{
     cursor: pointer;
+    display: inline-block;
+    width: 40.0%;
+    min-width: 1em;
+    height: 100%;
+    border: 1px solid rgba(208, 213, 211, 0);
+    border-radius: 10%;
+    background-color: rgba(248, 250, 255, 0.4);;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-position: -0.05em 0em;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    opacity: 0.8;
 }
 
-#lightspeedmsg {
+#speeder-button{
+    mask-image: url('../img/running.svg');
+    -webkit-mask-image: url('../img/running.svg');
+}
+
+#speeder button:hover{
+    opacity: 1.0;
+    background-color: #f8faff;
+}
+
+#speeder-button.activebutton{
+    opacity: 1.0;
+    background-color: rgba(0, 165, 130, 0.95);
+}
+
+#speedmsg {
     font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -262,8 +283,8 @@ img, img a {
     height: 40px;
     top: 90%;
     right: 5%;
-    margin-left: -240px;
-    margin-top: -40px;
+    margin-left: -10em;
+    margin-top: -2em;
     display: none
 }
 
@@ -275,11 +296,6 @@ img, img a {
     top: 6px
 }
 
-#lightspeeder img {
-    margin-top: -16px;
-    height: 44px;
-    width: 44px
-}
 
 .warpfactor {
     position: relative;

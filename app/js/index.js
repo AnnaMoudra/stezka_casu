@@ -143,20 +143,21 @@ $(function () {
         return false;
     })
 
-    $('#lightspeeder img').on('click', function (e) {
+    $('#speeder button').on('click', function (e) {
         stopSpeeding()
         if (isSpeeding == 1) {
+            document.getElementById('speeder-button').classList.remove('activebutton');
             cancelLightMsg()
             stopSpeeding()
             isSpeeding = 0
             return false
         }
         else {
+            document.getElementById('speeder-button').classList.add('activebutton');
             isSpeeding = 1
             fadeInLightMsg()
             changeUnitToSpeed()
-            $('#lightspeeder a').css('opacity', 1.0)
-            $('#lightspeedmsg').css('display', 'block')
+            $('#speedmsg').css('display', 'block')
             currentRAFID = startSpeedingAt()
             return false
         }
@@ -213,8 +214,8 @@ function cancelLightMsg() {
     msgIndex = 0
     isSpeeding = 0
     window.clearTimeout(msgTimer)
-    $('#lightspeedmsg').css('display', 'none')
-    $('#lightspeeder a').css('opacity', 0.7)
+    $('#speedmsg').css('display', 'none')
+    $('#speeder a').css('opacity', 0.7)
 };
 
 function updateDistance() {
