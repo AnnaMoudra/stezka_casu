@@ -125,11 +125,11 @@ $(function () {
         return false
 
     })
-    $('#langselect').on('click', function (e) {
+    $('.langselect').on('click', function (e) {
         var $lang = $('#langs')
         $lang.css('display', $lang.css('display') == 'none' ? 'block' : 'none')
     })
-    $('#langselect a').on('click', function (e) {
+    $('.langselect a').on('click', function (e) {
         language = languages[$(e.target).text()]
         delimeter = delimeters[$(e.target).text()]
         decimalmark = decimalmarks[$(e.target).text()]

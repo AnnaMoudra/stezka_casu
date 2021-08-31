@@ -12,6 +12,7 @@ $(function () {
         RollDownTimepath('timepath2',"47.5%")
         document.getElementById('distance-counter1').style.top= "45%";
         document.getElementById('distance-counter1').style.opacity= "1.0";
+        document.getElementById('distance-counter2').style.opacity= "1.0";
         document.getElementById('button_lower_path').classList.remove('activebutton');
         document.getElementById('button_upper_path').classList.remove('activebutton');
         document.getElementById('button_both_paths').classList.add('activebutton');
@@ -20,19 +21,19 @@ $(function () {
     $('#button_lower_path').on('click', function (e) {
         RollUpTimepath('timepath')
         RollDownTimepath('timepath2', "95%")
-        document.getElementById('distance-counter1').style.opacity= "1.0";
+        document.getElementById('distance-counter1').style.opacity= "0";
+        document.getElementById('distance-counter2').style.opacity= "1.0";
         document.getElementById('button_upper_path').classList.remove('activebutton');
         document.getElementById('button_both_paths').classList.remove('activebutton');
         document.getElementById('button_lower_path').classList.add('activebutton');
-        document.getElementById('distance-counter1').style.opacity = 1.0;
-        document.getElementById('distance-counter2').style.opacity = 1.0;
     });
 
     $('#button_upper_path').on('click', function (e) {
         RollUpTimepath('timepath2')
         RollDownTimepath('timepath',"95%")
         document.getElementById('distance-counter1').style.top= "93%";
-        document.getElementById('distance-counter1').style.opacity= "0";
+        document.getElementById('distance-counter1').style.opacity= "1.0";
+        document.getElementById('distance-counter2').style.opacity= "0";
         document.getElementById('button_lower_path').classList.remove('activebutton');
         document.getElementById('button_both_paths').classList.remove('activebutton');
         document.getElementById('button_upper_path').classList.add('activebutton');
