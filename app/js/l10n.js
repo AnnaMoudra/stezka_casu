@@ -81,7 +81,7 @@ var translations = {
     },
     'lightminutes': {
         'en': "Light Minutes",
-        'cs': "světelných minut",
+        'cs': "Světelných minut",
 
     },
     'earths': {
@@ -107,6 +107,35 @@ var translations = {
         'en': "Great Walls of China",
         'cs': "°;",
     },
+    '':{
+        'en':"",
+        'cs':"",
+    },
+    'highest-tone':{
+        'en':"One 20 Hz cycle of the highest tone perceptible by the human ear.",
+        'cs':"Doba jednoho cyklu frekvence 20 kHz - nejvyššího tónu slyšitelného lidským uchem.",
+    },
+    'lowest-tone':{
+        'en':"One 20 Hz cycle of the lowest tone perceptible by the human ear.",
+        'cs':"Doba jednoho cyklu frekvence 20 kHz - nejnižšího tónu slyšitelného lidským uchem.",
+    },
+    'photo-flash':{
+        'en':"Duration of a camera flash.",
+        'cs':"Délka trvání kamerového blesku.",
+    },
+    'bee-wings':{
+        'en':"One wing beat of a honeybee.",
+        'cs':"Mávnutí křídel včely.",
+    },
+    '':{
+        'en':"",
+        'cs':"",
+    },
+    '':{
+        'en':"",
+        'cs':"",
+    },
+
 }
 var languages = {English: 'en', Čeština: 'cs'}
 var delimeters = {English: ',', Čeština: ' '}
