@@ -31,8 +31,8 @@ var translations = {
         'cs': "(Pořád tě máme rádi)",
     },
     'might-as-well': {
-        'en': "Might as well stop now. We'll need to scroll through 6,771 more maps like this before we see anything else. ",
-        'cs':"",
+        'en': "Might as well stop now.",
+        'cs': "Už bychom mohli skončit, co říkáte?",
     },
     'back-to-site': {
         'en': "Back to FZU.cz",

@@ -199,7 +199,8 @@ img, img a {
     height: 100px;
     top: 0;
     left: 50%;
-    margin-left: -250px
+    margin-left: -250px;
+    z-index: 1000;
 }
 
 .nav li {
@@ -216,6 +217,11 @@ img, img a {
 
 .nav li img:hover {
     opacity: 1
+}
+
+.prevjump img{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 .bio-sine{

@@ -3,13 +3,13 @@ const path = require("path");
 
 const app = express();
 
-//official site
-app.use("/js", express.static(path.resolve(__dirname, "app", "js")));
-app.use("/img", express.static(path.resolve(__dirname, "app", "img")));
-app.use("/style", express.static(path.resolve(__dirname, "app", "style")));
+var app_dir = './../stezka_casu'
+app.use("/js", express.static(path.resolve(app_dir, "app", "js")));
+app.use("/img", express.static(path.resolve(app_dir, "app", "img")));
+app.use("/style", express.static(path.resolve(app_dir, "app", "style")));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname,"app", "index.html"));
+    res.sendFile(path.resolve(app_dir,"app", "index.html"));
 });
 
-app.listen(process.env.PORT || 8080, () => console.log("Server running.."));
+app.listen(process.env.PORT || 8000, () => console.log("NodeJS server running.."));
