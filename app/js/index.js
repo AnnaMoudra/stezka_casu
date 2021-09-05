@@ -19,7 +19,7 @@ var unitTable = {
     mm: 1,
     blinks: 0.4,
     lightminutes: 0.0000000555941,
-    pixels: 0.0002877863474156786
+    pixels: 1,
 }
 
 var msgTimer
