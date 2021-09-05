@@ -127,13 +127,21 @@ var translations = {
         'en':"One wing beat of a honeybee.",
         'cs':"Mávnutí křídel včely.",
     },
-    '':{
-        'en':"",
-        'cs':"",
+    'rubiks-cube':{
+        'en':"Fastest time to solve a Rubik's cube by a robot.",
+        'cs':"Nejrychlejši strojové řešení Rubikovy kostky.",
+    },
+    'emotions':{
+        'en':"How fast the human brain can recognize emotions on a person's face.",
+        'cs':"Doba za kterou lidský mozek dokáže rozpoznat emoce ve výrazu obličeje.",
+    },
+    'snap':{
+        'en':"Average finger snap.",
+        'cs':"Průměrné lusknutí prsty.",
     },
     '':{
-        'en':"",
-        'cs':"",
+        'en':"How fast the human brain can recognize emotions on a person's face.",
+        'cs':"Doba za kterou lidský mozek dokáže rozpoznat emoce ve výrazu obličeje.",
     },
 
 }
