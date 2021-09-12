@@ -139,6 +139,10 @@ var translations = {
         'en':"Average finger snap.",
         'cs':"Průměrné lusknutí prsty.",
     },
+        'light-1mm':{
+        'en':"Time taken for light to travel 1 millimeter.",
+        'cs':"Doba za kterou světlo urazí vzdálenost jednoho milimetru.",
+    },
     '':{
         'en':"How fast the human brain can recognize emotions on a person's face.",
         'cs':"Doba za kterou lidský mozek dokáže rozpoznat emoce ve výrazu obličeje.",
