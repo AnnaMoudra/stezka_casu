@@ -241,8 +241,11 @@ function updateDistance() {
     if(unit2 == 'μs'){
         distance += $(window).width()*1.5;
         distance /= 1000000
+        $('#counter2').text(distance.toFixed(2).toString().replace(".", decimalmark) + ' ' + unitname2);
     }
-    $('#counter2').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname2);
+    else{
+        $('#counter2').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname2);
+    }
 }
 
 function stopSpeeding() {
