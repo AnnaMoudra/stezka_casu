@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title id="pgtitle">Stezka času</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content=""> <!-- doplnit-->
+    <meta property="og:title" content="">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+
+    <link href="style/normalize.css" rel="stylesheet" type="text/css">
     <link href="style/styles.css" rel="stylesheet" type="text/css">
+    
+    <!--Google Analytics code-->
+    <!--
     <script type="4f8102ac04a197e1ea9443a0-text/javascript">
-  console.log("First script");
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-15285055-2']);
-  _gaq.push(['_trackPageview']);
+    console.log("First script");
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15285055-2']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-
-    </script>
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>-->
 
 </head>
+
 <body>
-<div id=upper_panel>
+<div id="upper_panel" role="nav">
+    <div class="header-left" id="credit">
+    
+            <a href="https://www.nocvedcu.cz/" class="logolink" target="_blank"><img src="img/nocvedcu-hero.svg" class="logo logo-nv"></a>
+            <a href="https://www.fzu.cz/domov" class="logolink" target="_blank" ><img src="img/FZU-L-U-RGB-WHITE.svg"class="logo logo-fzu"></a>
+        
+    </div>
+
+   
+    <div class="header-right">
     <div class="path_switcher">
         <button id="button_both_paths"></button>
         <button id="button_upper_path"></button>
         <button id="button_lower_path"></button>
     </div>
-
-    <div id="credit">
-        <a href="https://www.nocvedcu.cz/" class="logolink" target="_blank"><img src="img/nocvedcu-hero.svg"></a>
-        <a href="https://www.fzu.cz/domov" target="_blank"><img src="img/FZU-L-U-RGB-WHITE.svg"></a>
-    </div>
-
     <div class="langselect">
         <button id="langselect-button"></button>
         <div id="langs">
@@ -42,17 +56,16 @@
             </ul>
         </div>
     </div>
+    </div>
 </div>
 
-<div id="introwrap">
-    <div id="navblocker"></div>
-    <div id="introblocker"></div>
-    <div id="titlecard">
-        <img src="img/maintitle-en.svg" id="titleimg"></div>
-    <div class="scalewrap"><img src="img/scale-en.svg" id="scaleimg"></div>
-</div>
+<div class="content" role="main">
+    <div id="introwrap">
+        <div id="navblocker"></div>
+        <div id="introblocker"></div>
+    </div>
 
-<div id="path_container">
+    <div id="path_container">
     <div class="timepath" , id="timepath">
         <ul class="nav">
             <li><a href="#prevanchor" class="prevjump"><img src="img/jump_arrow.svg"></a></li>
@@ -196,7 +209,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 
