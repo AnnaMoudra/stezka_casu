@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
     background-color: #181819;
     margin: 0;
@@ -165,14 +165,105 @@ button.activebutton{
 }
 
 
+
+
+/*** CONTENT ***/
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+#introwrap {
+    height: 100vh; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#navblocker {
+    background-color: #00ad8c;
+    height: 100vh;
+    width: 80vw;
+    min-width: 800px;
+    margin-left: 0px;
+    scroll-behavior: smooth;
+}
+
+#introblocker {
+    background-color: #262727;
+    height: 100vh;
+    width: 40vw;
+    min-width: 500px;
+    margin-left: 0px;
+    scroll-behavior: smooth;
+}
+
+#path_container{
+    width: 1600000px;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.planetwrapper {
+    position: relative;
+    height: 100%;
+    top: 0%
+}
+
+
+.timepath{
+    position: relative;
+    left: 0px;
+    background-color: #181819;
+    background-image: url(../img/ticks_white_new.png);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    width: 1000000px;
+}
+
+#timepath {
+    height: 100%;
+    flex-basis: 50%;
+    border-bottom: 1px solid #00ad8c;
+    transition: height 500ms ease-in-out, opacity 400ms ease-in, visibility 400ms ease-in-out 400ms
+}
+
+
+#timepath2 {
+    height: 100%;
+    flex-basis: 50%;
+    border-bottom: 1px solid #d50054;
+    transition: height 500ms ease-in-out, opacity 400ms ease-in, visibility 400ms ease-in-out 400ms;
+
+}
+
+
 .nav {
+    position: sticky;
+    width: 160px;
     position: fixed;
-    width: 500px;
-    height: 100px;
-    top: 0;
-    left: 50%;
-    margin-left: -250px;
+    left: calc(92vw - 120px);
+    text-align: center;
     z-index: 1000;
+    transition: opacity 300ms ease-out;
+    margin: 0;
+}
+
+.nav.nav-timepath1 {
+    top: 42%;
+}
+
+.nav.nav-timepath2 {
+    top: 93%;
 }
 
 .nav li {
@@ -194,17 +285,6 @@ button.activebutton{
 .prevjump img{
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
-}
-
-
-/*** CONTENT ***/
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    height: 95vh;
 }
 
 
@@ -268,14 +348,14 @@ button.activebutton{
 
 #distance-counter1{
     color: #00ad8c;
-    top: 45%;
+    top: 42%;
     left: 50%;
     transition: top 600ms ease-out, opacity 600ms ease-in-out;
  }
 
 #distance-counter2{
     color: #d50054;
-    top: 93%;
+    top: 92%;
     left: 50%;
     transition: opacity 600ms ease-in-out;
 }
@@ -432,74 +512,9 @@ button.activebutton{
     opacity: 1
 }
 
-#introwrap {
-    float: left;
-    display: inline;
-    height: 100%;
-}
-
-#navblocker {
-    position: absolute;
-    background-color: #00ad8c;
-    top: 5%;
-    height: 100%;
-    width: 100%;
-    margin-left: 0px;
-    z-index: 15;
-    scroll-behavior: smooth;
-}
-
-#introblocker {
-    position: absolute;
-    background-color: #262727;
-    height: 100%;
-    width: 150%;
-    margin-left: 0px;
-    z-index: 14;
-    opacity: 0;
-    scroll-behavior: smooth;
-}
-
-.planetwrapper {
-    position: relative;
-    height: 100%;
-    top: 0%
-}
-
-#path_container{
-    position: absolute;
-    left: 150%;
-    width: 1600000px;
-    height: 100%;
-    top: 5%;
-}
 
 
 
-
-.timepath{
-    position: relative;
-    left: 0px;
-    background-color: #262727;
-    background-image: url(../img/ticks_white_new.png);
-    background-repeat: repeat-x;
-    background-position: left bottom;
-    width: 1000000px;
-}
-
-#timepath {
-    height: 47.5%;
-    border-bottom: 1px solid #00ad8c;
-    transition: height 500ms ease-in-out, opacity 400ms ease-in, visibility 400ms ease-in-out 400ms
-}
-
-
-#timepath2 {
-    height: 47.5%;
-    border-bottom: 1px solid #d50054;
-    transition: height 500ms ease-in-out, opacity 400ms ease-in, visibility 400ms ease-in-out 400ms;
-
-}
 
 .labeltext {
     position: absolute;

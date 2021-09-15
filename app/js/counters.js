@@ -12,12 +12,16 @@ $(window).scroll(function () {
             visible = true;
             document.getElementById('distance-counter1').style.opacity = 1.0;
             document.getElementById('distance-counter2').style.opacity = 1.0;
+            document.getElementById('nav-timepath1').style.opacity = 1.0;
+            document.getElementById('nav-timepath2').style.opacity = 1.0;
         }
 
         if (offset > obj_left && visible) {
             visible = false
             document.getElementById('distance-counter1').style.opacity = 0;
             document.getElementById('distance-counter2').style.opacity = 0;
+            document.getElementById('nav-timepath1').style.opacity = 0;
+            document.getElementById('nav-timepath2').style.opacity = 0;
         }
     });
 });

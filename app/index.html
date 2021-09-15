@@ -3,8 +3,8 @@
 <head>
     <title id="pgtitle">Stezka času</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">  
     <meta property="og:image" content=""> <!-- doplnit-->
     <meta property="og:title" content="">
     <meta property="og:title" content="">
@@ -15,19 +15,7 @@
     <link href="style/styles.css" rel="stylesheet" type="text/css">
     
     <!--Google Analytics code-->
-    <!--
-    <script type="4f8102ac04a197e1ea9443a0-text/javascript">
-    console.log("First script");
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-15285055-2']);
-    _gaq.push(['_trackPageview']);
 
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>-->
 
 </head>
 
@@ -43,16 +31,16 @@
    
     <div class="header-right">
     <div class="path_switcher">
-        <button id="button_both_paths"></button>
-        <button id="button_upper_path"></button>
-        <button id="button_lower_path"></button>
+        <button id="button_both_paths" title="Both Paths"></button>
+        <button id="button_upper_path" title="Upper Path"></button>
+        <button id="button_lower_path" title="Lower Path"></button>
     </div>
     <div class="langselect">
-        <button id="langselect-button"></button>
+        <button id="langselect-button" title="Select language"></button>
         <div id="langs">
             <ul>
-                <li><a href="#cs">Čeština</a></li>
-                <li><a href="#en">English</a></li>
+                <li><a href="#cs" title="Čeština">Čeština</a></li>
+                <li><a href="#en" title="English">English</a></li>
             </ul>
         </div>
     </div>
@@ -66,14 +54,9 @@
     </div>
 
     <div id="path_container">
-    <div class="timepath" , id="timepath">
-        <ul class="nav">
-            <li><a href="#prevanchor" class="prevjump"><img src="img/jump_arrow.svg"></a></li>
-            <li><a href="#starttxt" class="eventjump"><img src="img/jump_start.svg"></a></li>
-            <li><a href="#endtxt" class="eventjump"><img src="img/jump_end.svg"></a></li>
-            <li><a href="#nextanchor" class="nextjump"><img src="img/jump_arrow.svg"></a></li>
-        </ul>
-        <div class="planetwrapper">
+        <div class="timepath" id="timepath">
+        
+            <div class="planetwrapper">
 
             <!--  Start path us to s -->
             <div class="pointline" style="left:50px"></div>
@@ -120,9 +103,9 @@
                 </span>
                 <!--  Event navigation <li><a href="#nameofclass" class="eventjump"><img src="img/image_symbol"></a></li>-->
             </div>
-        </div>
+            </div>
 
-        <div class="distance-counter" id="distance-counter1" style="opacity:0">
+            <div class="distance-counter" id="distance-counter1" style="opacity:0">
             <div class="counter" id="counter"></div>
             <span class="selectarrow"><img src="img/arrow_down.svg"></span>
             <div class="unitselect">
@@ -133,11 +116,19 @@
                     <li><a href="" class="pixels">Pixels</a></li>
                 </ul>
             </div>
+            </div>
+            <ul class="nav nav-timepath1" id="nav-timepath1"  style="opacity:0">
+                <li><a href="#starttxt" class="eventjump"><img src="img/jump_start.svg"></a></li>
+                <li><a href="#prevanchor" class="prevjump"><img src="img/jump_arrow.svg"></a></li>
+                <li><a href="#nextanchor" class="nextjump"><img src="img/jump_arrow.svg"></a></li>
+                <li><a href="#endtxt" class="eventjump"><img src="img/jump_end.svg"></a></li>
+                
+            </ul>
         </div>
-    </div>
 
-    <div class="timepath" id=timepath2>
-        <div class="planetwrapper">
+        <div class="timepath" id=timepath2>
+            
+            <div class="planetwrapper">
             <!--  -->
 
             <div class="pointline" style="left:3.3px"></div>
@@ -177,37 +168,45 @@
                 <span style="margin-left:300px">
                 </span>
             </div>
-
+            </div>
             <!--  Event navigation <li><a href="#nameofclass" class="eventjump"><img src="img/image_symbol"></a></li>-->
+            <div class=distance-counter id="distance-counter2" style="opacity:0">
+                <div class="counter" id="counter2"></div>
+                <span class="selectarrow"><img src="img/arrow_down.svg"></span>
+                <div class="unitselect">
+                    <ul>
+                        <li><a href="" class="ps">ps</a></li>
+                        <li><a href="" class="ns">ns</a></li>
+                        <li><a href="" class="μs">μs</a></li>
+                        <li><a href="" class="pixels">Pixels</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="nav nav-timepath2" id="nav-timepath2" style="opacity:0">
+                <li><a href="#starttxt" class="eventjump"><img src="img/jump_start.svg"></a></li>
+                <li><a href="#prevanchor" class="prevjump"><img src="img/jump_arrow.svg"></a></li>
+                <li><a href="#nextanchor" class="nextjump"><img src="img/jump_arrow.svg"></a></li>
+                <li><a href="#endtxt" class="eventjump"><img src="img/jump_end.svg"></a></li>
+            </ul>
+        </div>
 
-            <div id="speeder">
+        <div class="speedy">
+        <div id="speeder">
                     <button id="speeder-button"></button>
                     <span class="warpfactor">
                     </span>
-            </div>
+        </div>
 
-            <div id="speedmsg">
+        <div id="speedmsg">
                     <div id="msg1">This is how fast ... travels...</div>
                     <div id="msg2">Spd msg 2.</div>
                     <div id="msg3">Spd msg 3.</div>
                     <div id="msg4">Spd msg 4.</div>
                     <div id="msg5">Spd msg 5.</div>
-                </div>
-            </div>
         </div>
-        <div class=distance-counter id="distance-counter2" style="opacity:0">
-            <div class="counter" id="counter2"></div>
-            <span class="selectarrow"><img src="img/arrow_down.svg"></span>
-            <div class="unitselect">
-                <ul>
-                    <li><a href="" class="ps">ps</a></li>
-                    <li><a href="" class="ns">ns</a></li>
-                    <li><a href="" class="μs">μs</a></li>
-                    <li><a href="" class="pixels">Pixels</a></li>
-                </ul>
-            </div>
         </div>
     </div>
+        
 </div>
 
 </body>
