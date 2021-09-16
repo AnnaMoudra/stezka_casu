@@ -85,8 +85,8 @@ img, img a {
     transition: opacity 300ms ease-in-out;
 }
 
-.path_switcher button{
-    cursor: pointer;
+.path_switcher_button{
+    cursor: auto;
     display: inline-block;
     width: 27.0%;
     min-width: 1em;
@@ -99,6 +99,11 @@ img, img a {
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
 }
+
+.cursor_pointer{
+    cursor:pointer;
+}
+
 
 #button_lower_path{
     mask-image: url(../img/button_paths_lower.svg);
