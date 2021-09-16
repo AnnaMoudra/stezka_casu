@@ -95,9 +95,9 @@ img, img a {
     border-radius: 10%;
     background-color: rgba(248, 250, 255, 0.4);
     background-size: 100% 100%;
-    mask-position: -0.05em 0em;
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
+    -webkit-mask-position: -0.05em 0em;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
 }
 
 .cursor_pointer{
@@ -106,15 +106,15 @@ img, img a {
 
 
 #button_lower_path{
-    mask-image: url(../img/button_paths_lower.svg);
+    -webkit-mask-image: url(../img/button_paths_lower.svg);
 }
 
 #button_upper_path{
-    mask-image: url(../img/button_paths_upper.svg);
+    -webkit-mask-image: url(../img/button_paths_upper.svg);
 }
 
 #button_both_paths{
-    mask-image: url(../img/button_paths_both.svg);
+    -webkit-mask-image: url(../img/button_paths_both.svg);
 }
 
 .path_switcher button:hover{
@@ -142,15 +142,15 @@ button.activebutton{
     border: 1px solid rgba(208, 213, 211, 0);
     border-radius: 10%;
     background-color: rgba(248, 250, 255, 0.4);;
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-    mask-position: -0.0em 0em;
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: -0.0em 0em;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
 }
 
 #langselect-button{
-    mask-image: url('../img/globe_icon.svg');
+    -webkit-mask-image: url('../img/globe_icon.svg');
 }
 
 .langselect button:hover{
@@ -440,16 +440,16 @@ button.activebutton{
     border: 1px solid rgba(208, 213, 211, 0);
     border-radius: 10%;
     background-color: rgba(248, 250, 255, 0.4);;
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-    mask-position: -0.05em 0em;
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: -0.05em 0em;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
     opacity: 0.8;
 }
 
 #speeder-button{
-    mask-image: url(../img/running.svg);
+    -webkit-mask-image: url(../img/running.svg);
 }
 
 #speeder button:hover{
