@@ -212,7 +212,7 @@ button.activebutton{
     align-items: stretch;
 }
 
-.planetwrapper {
+.timelinewrapper {
     position: relative;
     height: 100%;
     top: 0%
