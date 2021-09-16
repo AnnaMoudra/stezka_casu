@@ -393,6 +393,14 @@ button.activebutton{
     text-decoration: none;
 }
 
+#unitselect_upper li a{
+     color: #00ad8c;
+ }
+
+#unitselect_lower li a{
+    color: #ae003e;
+}
+
 .unitselect li:hover > a, .langselect li:hover > a {
     color: #fff
 }
