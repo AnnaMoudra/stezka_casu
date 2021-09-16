@@ -95,26 +95,21 @@ img, img a {
     border-radius: 10%;
     background-color: rgba(248, 250, 255, 0.4);
     background-size: 100% 100%;
-    mask-repeat: no-repeat;
+    mask-position: -0.05em 0em;
     mask-size: 100% 100%;
-    -webkit-mask-position: -0.05em 0em;
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
 
 #button_lower_path{
-    -webkit-mask-image: url('../img/button_paths_lower.svg');
-    mask-image: url('../img/button_paths_lower.svg');
+    mask-image: url(../img/button_paths_lower.svg);
 }
 
 #button_upper_path{
-    -webkit-mask-image: url('../img/button_paths_upper.svg');
-    mask-image: url('../img/button_paths_upper.svg');
+    mask-image: url(../img/button_paths_upper.svg);
 }
 
 #button_both_paths{
-    -webkit-mask-image: url('../img/button_paths_both.svg');
-    mask-image: url('../img/button_paths_both.svg');
+    mask-image: url(../img/button_paths_both.svg);
 }
 
 .path_switcher button:hover{
@@ -144,14 +139,13 @@ button.activebutton{
     background-color: rgba(248, 250, 255, 0.4);;
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
-    -webkit-mask-position: -0.05em 0em;
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
+    mask-position: -0.05em 0em;
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
 }
 
 #langselect-button{
     mask-image: url('../img/globe_icon.svg');
-    -webkit-mask-image: url('../img/globe_icon.svg');
 }
 
 .langselect button:hover{
@@ -243,7 +237,6 @@ button.activebutton{
     flex-basis: 50%;
     border-bottom: 1px solid #d50054;
     transition: height 500ms ease-in-out, opacity 400ms ease-in, visibility 400ms ease-in-out 400ms;
-
 }
 
 
@@ -284,7 +277,6 @@ button.activebutton{
 
 .prevjump img{
     transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
 }
 
 
@@ -437,15 +429,14 @@ button.activebutton{
     background-color: rgba(248, 250, 255, 0.4);;
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
-    -webkit-mask-position: -0.05em 0em;
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
+    mask-position: -0.05em 0em;
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
     opacity: 0.8;
 }
 
 #speeder-button{
-    mask-image: url('../img/running.svg');
-    -webkit-mask-image: url('../img/running.svg');
+    mask-image: url(../img/running.svg);
 }
 
 #speeder button:hover{
