@@ -406,15 +406,15 @@ button.activebutton{
 
 #speeder {
     position: fixed;
-    width: 120px;
-    height: 50px;
-    top: 90%;
+    width: 9em;
+    height: 5em;
+    top: 50%;
     left: 99%;
-    margin-left: -5em;
+    margin-left: -4em;
     font-family: Work Sans,sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 11px;
+    font-size: 0.8em;
     z-index: 10;
 }
 
