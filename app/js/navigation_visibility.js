@@ -1,4 +1,4 @@
-var finish = $('#path_container').position().left + $('#path_container').width() - $(window).width() * 0.35; //finishline
+var finish = $('#path_container').position().left + $('#path_container').width() - $(window).width() * 0.35;
 var start =  $('#path_container').position().left - $(window).width() * 0.55;
 
 var visible_eventjumps;
