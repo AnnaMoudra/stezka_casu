@@ -1,17 +1,17 @@
 var finish = $('#path_container').position().left + $('#path_container').width() - $(window).width() * 0.35; //finishline
 var start =  $('#path_container').position().left - $(window).width() * 0.55;
 
-var visible_eventjumps;// = false;
-var visible_buttons;// = false;
-var visible_counters;// = false;
+var visible_eventjumps;
+var visible_buttons;
+var visible_counters;
 
 if ((window.pageXOffset < start) || window.pageXOffset > finish) {
-    visible_eventjumps = false;
-    visible_buttons = false;
-    visible_counters = false;
     hideEventJumps();
     hidePathSwitcher();
     hideCounters();
+    visible_eventjumps = false;
+    visible_buttons = false;
+    visible_counters = false;
 }
 else {
     visible_eventjumps = true;
@@ -21,29 +21,24 @@ else {
     visible_counters = true;
     showCounters();
 }
-
-
 //window.path_switcher_opacity = 0
 //$('.path_switcher')[0].style.opacity = window.path_switcher_opacity;
 
 function hideCounters() {
-    console.log("Hiding counters");
     document.getElementById('distance-counter1').style.opacity = 0;
     document.getElementById('distance-counter2').style.opacity = 0;
 };
 
 function showCounters() {
-    console.log("Showing counters");
     document.getElementById('distance-counter1').style.opacity = 1.0;
     document.getElementById('distance-counter2').style.opacity = 1.0;
 };
 
 function hideEventJumps() {
-    console.log("Hiding jumps");
     var navigator_btns = document.getElementsByClassName('jumpbtn');
     for (var i = 0, all = navigator_btns.length; i < all; i++) {
         navigator_btns[i].classList.remove('cursor_pointer');
-        //navigator_btns[i].style.opacity = 0.0;
+        navigator_btns[i].style.pointerEvents = 'none';
     }
     document.getElementsByClassName('nav-timepath1')[0].style.opacity = 0.0;
     document.getElementsByClassName('nav-timepath2')[0].style.opacity = 0.0;
@@ -53,7 +48,7 @@ function showEventJumps() {
     var navigator_btns = document.getElementsByClassName('jumpbtn');
     for (var i = 0, all = navigator_btns.length; i < all; i++) {
         navigator_btns[i].classList.add('cursor_pointer');
-        //[i].style.opacity = 1.0;
+        navigator_btns[i].style.pointerEvents = '';
     }
     document.getElementsByClassName('nav-timepath1')[0].style.opacity = 1.0;
     document.getElementsByClassName('nav-timepath2')[0].style.opacity = 1.0;

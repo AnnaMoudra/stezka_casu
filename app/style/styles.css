@@ -284,6 +284,10 @@ button.activebutton{
     transform: rotate(180deg);
 }
 
+.jump_btn {
+    pointer-events: none;
+}
+
 
 .pointline{
     position: absolute;
