@@ -1,12 +1,8 @@
-console.log("Button js loaded");
-
+//setting dominant button
 var button = document.getElementById('button_both_paths');
 button.classList.add('activebutton');
-var visible_buttons = false;
-$('.path_switcher')[0].style.opacity = 0;
-document.getElementById('button_upper_path').disabled = false;
-document.getElementById('button_both_paths').disabled = false;
-document.getElementById('button_lower_path').disabled = false;
+
+
 
 $(function () {
     $('#button_both_paths').on('click', function (e) {
@@ -53,7 +49,6 @@ $(function () {
 
 function RollUpTimepath(element){
     document.getElementById(element).style.height = "0%";
-
     document.getElementById(element).style.flexBasis = "auto";
     document.getElementById(element).style.opacity = 0;
 }
@@ -64,34 +59,3 @@ function RollDownTimepath(element, height){
     document.getElementById(element).style.flexBasis = "auto";
 
 }
-
-$(window).scroll(function () {
-    /* Check the location of each desired element */
-    $('.path_switcher').each(function (i) {
-        var obj_left = window.pageXOffset;
-        var offset = $(window).width();
-
-        /* If the object is completely visible in the window, fade it it */
-        if (offset < obj_left && visible_buttons == false) {
-            visible_buttons = true;
-            $('.path_switcher')[0].style.opacity = 1.0;
-
-            var buttons = document.getElementsByClassName('path_switcher_button');
-            for(var i = 0, all = buttons.length; i < all; i++){   
-                buttons[i].classList.add('cursor_pointer');
-            }
-            $('.path_switcher_button').disabled = false;
-        }
-
-        if (offset > obj_left && visible_buttons) {
-            visible_buttons = false;
-            $('.path_switcher')[0].style.opacity = 0;
-            var buttons = document.getElementsByClassName('path_switcher_button');
-            for(var i = 0, all = buttons.length; i < all; i++){   
-                buttons[i].classList.remove('cursor_pointer');
-            }
-            $('.path_switcher_button').disabled = true;
-
-        }
-    });
-});

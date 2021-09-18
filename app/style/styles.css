@@ -517,9 +517,6 @@ button.activebutton{
 }
 
 
-
-
-
 .labeltext {
     position: absolute;
     font-family: gotham ssm a, gotham ssm b, helvetica neue, Helvetica, Arial, sans-serif;
@@ -600,6 +597,7 @@ button.activebutton{
     font-size: 2em;
     left: 0px;
 }
+
 #end {
     position: relative;
     left: 10px;
