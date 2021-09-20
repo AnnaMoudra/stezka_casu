@@ -14,7 +14,7 @@ var translations = {
     },
     'the-fact-that': {
         'en': "The fact that you're here, in the midst of all this nothing, is pretty amazing when you stop and think about it.",
-        'cs': "To, že jste stále tady, uprostřed tohoto prázdna, je skutečně užasné když se nad tím zamyslíte.",
+        'cs': "To, že jste stále tady uprostřed tohoto prázdna, je skutečně užasné, když se nad tím zamyslíte.",
     },
     'congratulations-on-making': {
         'en': "Congratulations on making it this far.",
@@ -139,16 +139,47 @@ var translations = {
         'en':"Average finger snap.",
         'cs':"Průměrné lusknutí prsty.",
     },
-        'light-1mm':{
+    'light-1mm':{
         'en':"Time taken for light to travel 1 millimeter.",
         'cs':"Doba za kterou světlo urazí vzdálenost jednoho milimetru.",
     },
-    '':{
-        'en':"How fast the human brain can recognize emotions on a person's face.",
-        'cs':"Doba za kterou lidský mozek dokáže rozpoznat emoce ve výrazu obličeje.",
+    'pretty-empty':{
+        'en':"Pretty emty out here.",
+        'cs':"Je tu pěkně prázdno.",
+    },
+    'time-is-a-drug':{
+        'en': '“Time is a drug. Too much of it kills you.”',
+        'cs': '„Čas je droga. Když ho užíváte příliš dlouho, zahubí vás.“'
+    },
+    'small-gods':{
+        'en':"Small Gods",
+        'cs':"Malí bohové",
+    },
+    'inspired-by':{
+        'en':"This project was inspired by the work of Josh Worth",
+        'cs':"Tento projekt byl inspirován prací Joshe Wortha",
+    },
+    'back-fzu':{
+        'en':"FZU",
+        'cs':"FZU",
+    },
+    'back-res-night':{
+        'en':"Czech European Researcher's Night",
+        'cs':"Noc Vědců 2021",
+    },
+    'made-by':{
+        'en':"Made by the Institute of Physics of the Czech Academy of Sciences for the Czech European Researcher's Night",
+        'cs':"Vytvořeno Fyzikálním ústavem Akademie věd pro Noc vědců",
     },
 
 }
 var languages = {English: 'en', Čeština: 'cs'}
 var delimeters = {English: ',', Čeština: ' '}
 var decimalmarks = {English: '.', Čeština: ','}
+
+/** empty line
+ '':{
+        'en':"",
+        'cs':"",
+    },
+ */

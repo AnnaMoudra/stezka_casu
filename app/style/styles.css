@@ -605,7 +605,7 @@ button.activebutton{
 .ending{
     height: 100%;
     width: 10000px;
-    text-align: center;
+    min-width: 10000px;
     color: white;
     flex-direction: row;
 }
@@ -613,22 +613,31 @@ button.activebutton{
 .ending div{
     position: relative;
     white-space: nowrap;
-    top: 40%;
     text-align: center;
-    padding-right: 50%;
+    top: 40%;
+    padding-right: 10%;
 }
 
 .credits{
-    flex-direction: row;
-    height: 100vh; 
+    height: 100%; 
     text-align: center;
     color: white;
+    flex-direction: row;
 }
 
 .credits div{
     position: relative;
-    inline-size: 50em;
-    top: 40%;
+    white-space: nowrap;
     text-align: center;
+    top: 40%;
     padding-right: 5em;
+}
+
+.credits div a{
+    color: white;
+    text-decoration: none;
+}
+
+.credits div a:hover{
+    color: #d50054;
 }

@@ -35,13 +35,14 @@ function showCounters() {
 };
 
 function hideEventJumps() {
+    document.getElementsByClassName('nav-timepath1')[0].style.opacity = 0.0;
+    document.getElementsByClassName('nav-timepath2')[0].style.opacity = 0.0;
     var navigator_btns = document.getElementsByClassName('jumpbtn');
     for (var i = 0, all = navigator_btns.length; i < all; i++) {
         navigator_btns[i].classList.remove('cursor_pointer');
         navigator_btns[i].style.pointerEvents = 'none';
     }
-    document.getElementsByClassName('nav-timepath1')[0].style.opacity = 0.0;
-    document.getElementsByClassName('nav-timepath2')[0].style.opacity = 0.0;
+    
 }
 
 function showEventJumps() {
