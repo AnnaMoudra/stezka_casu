@@ -55,15 +55,22 @@ $(function () {
         cancelLightMsg()
         stopSpeeding();
         var $anchor = $(this);
-        $('html, body').stop().animate({scrollLeft: $($anchor.attr('href')).offset().left}, 5000, 'easeInOutExpo');
+        $('html, body').stop().animate({scrollLeft: $($anchor.attr('href')).offset().left - ($(window).width ()* 0.1)}, 5000, 'easeInOutQuad');
         event.preventDefault();
     })
+
+    //jump coordinates for arrows
     var essayMarks = [];
     $('.essay').each(function () {
         essayMarks.push($(this).offset().left - 200)
     });
-    var planetMarks = [$('#path_container').offset().left, $('#endtxt').offset().left,];
-    var destinations = $.makeArray(essayMarks).concat($.makeArray(planetMarks));
+
+    //jump coordinates for special symbols
+    //var marks = [$('#path_container').offset().left, ($('#path_container').offset().left + $('#path_container').width())];
+    //console.log(marks);
+    var marks = []; //we have no special symbols yet
+
+    var destinations = $.makeArray(essayMarks).concat($.makeArray(marks));
     destinations.sort(function (a, b) {
         return a - b
     });

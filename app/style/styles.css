@@ -556,9 +556,7 @@ button.activebutton{
 }
 
 #endwrap {
-    left: 1000000px;
-    margin-right: 0;
-    position: absolute;
+    position: relative;
     top: 0%;
     width: 40px;
     height: 100%;
@@ -594,30 +592,40 @@ button.activebutton{
     100% {background-color: #d50054;}
 }
 
-#endtxt {
-    position: relative;
-    width: 200px;
-    color: #c5e3ff;
-    font-size: 2em;
-    left: 0px;
-}
-
-#end {
-    position: relative;
-    left: 10px;
-    padding-left: -100px;
-    height: 100px;
-    width: 100px;
-    fill: #da56ed;
-
-}
-
 .finale {
     height: 100vh;
     width: 100vw;
     min-width: 800px;
-    background-color: #d50054;
+    background-color: #d50055f6;
     text-align: center;
     color: white;
     padding: 10em;
+}
+
+.ending{
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.ending div{
+    position: relative;
+    white-space: nowrap;
+    top: 40%;
+    text-align: center;
+    padding-right: 50%;
+}
+
+.credits{
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.credits div{
+    position: relative;
+    white-space: nowrap;
+    top: 40%;
+    text-align: center;
+    padding-right: 50%;
 }
