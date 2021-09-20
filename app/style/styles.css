@@ -604,8 +604,10 @@ button.activebutton{
 
 .ending{
     height: 100%;
+    width: 10000px;
     text-align: center;
     color: white;
+    flex-direction: row;
 }
 
 .ending div{
@@ -617,15 +619,16 @@ button.activebutton{
 }
 
 .credits{
-    height: 100%;
+    flex-direction: row;
+    height: 100vh; 
     text-align: center;
     color: white;
 }
 
 .credits div{
     position: relative;
-    white-space: nowrap;
+    inline-size: 50em;
     top: 40%;
     text-align: center;
-    padding-right: 50%;
+    padding-right: 5em;
 }
