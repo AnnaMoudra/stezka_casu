@@ -171,6 +171,10 @@ var translations = {
         'en':"Made by the Institute of Physics of the Czech Academy of Sciences for the Czech European Researcher's Night",
         'cs':"Vytvořeno Fyzikálním ústavem Akademie věd pro Noc vědců",
     },
+    'proc-cycle':{
+        'en':"Cycle duration on 3GHz processor.",
+        'cs':"Doba jednoho instrukčního cyklu 3GHz procesoru.",
+    },
 
 }
 var languages = {English: 'en', Čeština: 'cs'}
