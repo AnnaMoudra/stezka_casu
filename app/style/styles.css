@@ -338,27 +338,11 @@ button.activebutton{
 
 .counterline{
     position: fixed;
-    width: 2px;
+    width: 1px;
     height: 3em;
-    z-index:2000;
-    opacity: 1.0;
-    color: white;
-    border: white;
-}
-
-#counterline1{
-    color: #00ad8c;
-    top: 42%;
-    left: 50%;
-    transition: top 600ms ease-out, opacity 600ms ease-in-out;
-}
-
-
-#counterline2{
-    color: #d50054;
-    top: 92%;
-    left: 50%;
-    transition: opacity 600ms ease-in-out;
+    z-index: 20;
+    margin-right: 2px;
+    background-color: white;
 }
 
 .distance-counter{
@@ -374,19 +358,20 @@ button.activebutton{
 #distance-counter1{
     color: #00ad8c;
     top: 42%;
-    left: 52%;
+    left: 50%;
     transition: top 600ms ease-out, opacity 600ms ease-in-out;
  }
 
 #distance-counter2{
     color: #d50054;
     top: 92%;
-    left: 52%;
+    left: 50%;
     transition: opacity 600ms ease-in-out;
 }
 
 .counter {
     font-size: 0.8em;
+    padding-left: 5px;
     display: inline;
     cursor: pointer
 }

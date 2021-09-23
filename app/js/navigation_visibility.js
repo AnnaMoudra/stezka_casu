@@ -27,15 +27,15 @@ else {
 function hideCounters() {
     document.getElementById('distance-counter1').style.opacity = 0;
     document.getElementById('distance-counter2').style.opacity = 0;
-    document.getElementById('counterline1').style.opacity = 0;
-    document.getElementById('counterline2').style.opacity = 0;
+    //document.getElementById('counterline1').style.opacity = 0;
+    //document.getElementById('counterline2').style.opacity = 0;
 };
 
 function showCounters() {
     document.getElementById('distance-counter1').style.opacity = 1.0;
     document.getElementById('distance-counter2').style.opacity = 1.0;
-    document.getElementById('counterline1').style.opacity = 1.0;
-    document.getElementById('counterline2').style.opacity = 1.0;
+    //document.getElementById('counterline1').style.opacity = 1.0;
+    //document.getElementById('counterline2').style.opacity = 1.0;
 };
 
 function hideEventJumps() {

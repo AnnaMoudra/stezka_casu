@@ -198,9 +198,9 @@ function cancelLightMsg() {
 };
 
 function updateDistance() {
-    var counter_size1 = $('#distance-counter1').width() - 3;
-    var counter_size2 = $('#distance-counter2').width() - 3;
-    var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5 + counter_size1;
+    //var counter_size1 = $('#distance-counter1').width() - 3;
+    //var counter_size2 = $('#distance-counter2').width() - 3;
+    var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5;
     //px -= $(window).width()*1.5;
     var distance = px * unitTable[unit];
     if(unit == 'mm'){
@@ -209,7 +209,7 @@ function updateDistance() {
     
     $('#counter').text(Math.max(0, distance.toFixed(1)).toString().replace(".", decimalmark).replace(/\B(?=(\d{3})+(?!\d))/g, delimeter) + ' ' + unitname);
 
-    var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5 + counter_size2;
+    var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5;
     var distance = px * unitTable[unit2];
     //distance -= $(window).width()*1.5;
 

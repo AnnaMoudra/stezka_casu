@@ -11,11 +11,11 @@ $(function () {
         RollDownTimepath('timepath2',"100%")
         document.getElementById('distance-counter1').style.top= "42%";
         document.getElementById('nav-timepath1').style.top= "42%";
-        document.getElementById('counterline1').style.top= "42%";
+        //document.getElementById('counterline1').style.top= "42%";
         document.getElementById('distance-counter1').style.opacity= "1.0";
         document.getElementById('distance-counter2').style.opacity= "1.0";
-        document.getElementById('counterline1').style.opacity= "1.0";
-        document.getElementById('counterline2').style.opacity= "1.0";
+        //document.getElementById('counterline1').style.opacity= "1.0";
+        //document.getElementById('counterline2').style.opacity= "1.0";
         document.getElementById('nav-timepath2').style.opacity= "1.0";
         document.getElementById('button_lower_path').classList.remove('activebutton');
         document.getElementById('button_upper_path').classList.remove('activebutton');
@@ -27,8 +27,8 @@ $(function () {
         RollDownTimepath('timepath2', "100%")
         document.getElementById('distance-counter1').style.opacity= "0";
         document.getElementById('distance-counter2').style.opacity= "1.0";
-        document.getElementById('counterline1').style.opacity= "0";
-        document.getElementById('counterline2').style.opacity= "1.0";
+        //document.getElementById('counterline1').style.opacity= "0";
+        //document.getElementById('counterline2').style.opacity= "1.0";
         document.getElementById('nav-timepath1').style.opacity= "0";
         document.getElementById('nav-timepath2').style.opacity= "1.0";
         document.getElementById('button_upper_path').classList.remove('activebutton');
@@ -41,11 +41,11 @@ $(function () {
         RollDownTimepath('timepath',"100%")
         document.getElementById('distance-counter1').style.top= "92%";
         document.getElementById('nav-timepath1').style.top= "92%";
-        document.getElementById('counterline1').style.top= "92%";
+        //document.getElementById('counterline1').style.top= "92%";
         document.getElementById('distance-counter1').style.opacity= "1.0";
         document.getElementById('distance-counter2').style.opacity= "0";
-        document.getElementById('counterline1').style.opacity= "1.0";
-        document.getElementById('counterline2').style.opacity= "0.0";
+        //document.getElementById('counterline1').style.opacity= "1.0";
+        //document.getElementById('counterline2').style.opacity= "0.0";
         document.getElementById('nav-timepath1').style.opacity= "1.0";
         document.getElementById('nav-timepath2').style.opacity= "0";
         document.getElementById('button_lower_path').classList.remove('activebutton');
