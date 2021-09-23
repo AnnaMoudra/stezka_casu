@@ -18,7 +18,7 @@ var unitTable = {
     km: 1,
     mm: 1,
     blinks: 0.4,
-    lightminutes: 0.0000000555941,
+    //lightminutes: 0.0000000555941,
     pixels: 1,
 }
 
@@ -171,21 +171,7 @@ $(function () {
     })
 });
 
-function changeUnitToSpeed() {
-    unit = 'mm'
-    unit2 = 'mm'
-    unitname = 'mm'//$('#lightminutes').text()
-    unitname2 = 'mm'
-    updateDistance()
-};
 
-function changeUnitToBlink() {
-    unit = 'blinks'
-    unit2 = 'blinks'
-    unitname = 'blinks'//$('#lightminutes').text()
-    unitname2 = 'blinks'
-    updateDistance()
-};
 
 function startSpeedingAt() {
     stopSpeeding()
@@ -201,20 +187,6 @@ function startSpeedingAt() {
 }
 
 
-function fadeInLightMsg() {
-    msgNum[msgIndex].fadeIn(500)
-    msgTimer = window.setTimeout(fadeOutLightMsg, 4500)
-};
-
-function fadeOutLightMsg() {
-    msgNum[msgIndex].fadeOut(500)
-    if (msgIndex < msgNum.length - 1) {
-        msgIndex = msgIndex + 1
-        fadeInLightMsg()
-    } else {
-        return
-    }
-};
 
 function cancelLightMsg() {
     msgNum[msgIndex].fadeOut(500)
@@ -261,3 +233,42 @@ function stopSpeeding() {
 
 $('#monitors').text(Math.floor($('#timepath').width() / screen.availWidth / window.devicePixelRatio));
 $(window).scroll(updateDistance);
+
+/** Unused functions
+ * 
+ * 
+ *  Changing units when speeding
+ function changeUnitToSpeed() {
+    unit = 'mm'
+    unit2 = 'mm'
+    unitname = 'mm'//$('#lightminutes').text()
+    unitname2 = 'mm'
+    updateDistance()
+};
+
+function changeUnitToBlink() {
+    unit = 'blinks'
+    unit2 = 'blinks'
+    unitname = 'blinks'//$('#lightminutes').text()
+    unitname2 = 'blinks'
+    updateDistance()
+};
+ * 
+ * Messages when speeding
+function fadeInLightMsg() {
+    msgNum[msgIndex].fadeIn(500)
+    msgTimer = window.setTimeout(fadeOutLightMsg, 4500)
+};
+
+function fadeOutLightMsg() {
+    msgNum[msgIndex].fadeOut(500)
+    if (msgIndex < msgNum.length - 1) {
+        msgIndex = msgIndex + 1
+        fadeInLightMsg()
+    } else {
+        return
+    }
+};
+ * 
+ * 
+ */
