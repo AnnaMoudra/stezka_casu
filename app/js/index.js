@@ -52,7 +52,7 @@ $(function () {
         }
     }
     $('ul.nav a.eventjump').bind('click', function (event) {
-        cancelLightMsg()
+        //cancelLightMsg()
         stopSpeeding();
         var $anchor = $(this);
         $('html, body').stop().animate({scrollLeft: $($anchor.attr('href')).offset().left - ($(window).width ()* 0.1)}, 5000, 'easeInOutQuad');
@@ -61,8 +61,19 @@ $(function () {
 
     //jump coordinates for arrows
     var essayMarks = [];
+    var half_window = $(window).width()*.25
     $('.essay').each(function () {
-        essayMarks.push($(this).offset().left - 200)
+        essayMarks.push($(this).offset().left - half_window)
+    });
+
+    var timeline1Marks = [];
+    $('.note1').each(function () {
+        timeline1Marks.push($(this).offset().left - half_window)
+    });
+
+    var timeline2Marks = [];
+    $('.note2').each(function () {
+        timeline2Marks.push($(this).offset().left - half_window)
     });
 
     //jump coordinates for special symbols
@@ -70,18 +81,42 @@ $(function () {
     //console.log(marks);
     var marks = []; //we have no special symbols yet
 
-    var destinations = $.makeArray(essayMarks).concat($.makeArray(marks));
-    destinations.sort(function (a, b) {
+    var destinations1 = $.makeArray(timeline1Marks);
+    destinations1.sort(function (a, b) {
         return a - b
     });
-    var destinationNext = destinations[0];
+
+    var destinations2 = $.makeArray(timeline2Marks);
+    destinations2.sort(function (a, b) {
+        return a - b
+    });
+
+    var destinationNext1 = destinations1[0];
+    var destinationNext2 = destinations1[0];
+
     $('ul.nav a.nextjump').bind('click', function (event) {
-        cancelLightMsg()
+        //cancelLightMsg()
         stopSpeeding();
+        var classes = $.makeArray($(this)[0].classList)
+        //console.log(t));
+        if(classes.includes("timepath1")){
+            destinations = destinations1
+            destinationNext = destinationNext1
+        }
+        else{
+            destinations = destinations2
+            destinationNext = destinationNext2
+        }
         var currentDist = (window.pageXOffset);
         $.each(destinations, function (index, value) {
-            if (currentDist >= value - 100) {
+            if (currentDist >= value - 200) {
                 destinationNext = destinations[index + 1];
+                if(classes.includes("timepath1")){
+                    destinationNext1 = destinationNext
+                }
+                else{
+                    destinationNext2 = destinationNext
+                }
             }
             else {
                 return false
@@ -90,13 +125,32 @@ $(function () {
         $('html, body').stop().animate({scrollLeft: destinationNext}, 4500, 'easeInOutQuad');
         event.preventDefault();
     })
+
     $('ul.nav a.prevjump').bind('click', function (event) {
-        cancelLightMsg()
+        //cancelLightMsg()
         stopSpeeding();
         var currentDist = (window.pageXOffset);
+
+        var classes = $.makeArray($(this)[0].classList)
+        //console.log(t));
+        if(classes.includes("timepath1")){
+            destinations = destinations1
+            destinationNext = destinationNext1
+        }
+        else{
+            destinations = destinations2
+            destinationNext = destinationNext2
+        }
+
         $.each(destinations, function (index, value) {
-            if (currentDist <= value + 100) {
+            if (currentDist <= value + 200) {
                 destinationNext = destinations[index - 1];
+                if(classes.includes("timepath1")){
+                    destinationNext1 = destinationNext
+                }
+                else{
+                    destinationNext2 = destinationNext
+                }
                 return false
             }
         });
@@ -150,27 +204,8 @@ $(function () {
         return false;
     })
 
-    $('#speeder button').on('click', function (e) {
-        stopSpeeding()
-        if (isSpeeding == 1) {
-            document.getElementById('speeder-button').classList.remove('activebutton');
-            cancelLightMsg()
-            stopSpeeding()
-            isSpeeding = 0
-            return false
-        }
-        else {
-            document.getElementById('speeder-button').classList.add('activebutton');
-            isSpeeding = 1
-            fadeInLightMsg()
-            changeUnitToSpeed()
-            $('#speedmsg').css('display', 'block')
-            currentRAFID = startSpeedingAt()
-            return false
-        }
-    })
+    
 });
-
 
 
 function startSpeedingAt() {
@@ -186,22 +221,9 @@ function startSpeedingAt() {
     return requestAnimationFrame(onEnterFrame)
 }
 
-
-
-function cancelLightMsg() {
-    msgNum[msgIndex].fadeOut(500)
-    msgIndex = 0
-    isSpeeding = 0
-    window.clearTimeout(msgTimer)
-    $('#speedmsg').css('display', 'none')
-    $('#speeder a').css('opacity', 0.7)
-};
-
 function updateDistance() {
-    //var counter_size1 = $('#distance-counter1').width() - 3;
-    //var counter_size2 = $('#distance-counter2').width() - 3;
     var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5;
-    //px -= $(window).width()*1.5;
+
     var distance = px * unitTable[unit];
     if(unit == 'mm'){
         distance += $(window).width()*1.5;
@@ -211,7 +233,6 @@ function updateDistance() {
 
     var px = (window.pageXOffset - $('#path_container').position().left) + $(window).width()*.5;
     var distance = px * unitTable[unit2];
-    //distance -= $(window).width()*1.5;
 
     if(unit2 == 'mm'){
         distance += $(window).width()*1.5;
@@ -271,4 +292,35 @@ function fadeOutLightMsg() {
 };
  * 
  * 
+ * 
+ * 
+ function cancelLightMsg() {
+    msgNum[msgIndex].fadeOut(500)
+    msgIndex = 0
+    isSpeeding = 0
+    window.clearTimeout(msgTimer)
+    $('#speedmsg').css('display', 'none')
+    $('#speeder a').css('opacity', 0.7)
+};
+
+
+$('#speeder button').on('click', function (e) {
+        stopSpeeding()
+        if (isSpeeding == 1) {
+            document.getElementById('speeder-button').classList.remove('activebutton');
+            cancelLightMsg()
+            stopSpeeding()
+            isSpeeding = 0
+            return false
+        }
+        else {
+            document.getElementById('speeder-button').classList.add('activebutton');
+            isSpeeding = 1
+            fadeInLightMsg()
+            changeUnitToSpeed()
+            $('#speedmsg').css('display', 'block')
+            currentRAFID = startSpeedingAt()
+            return false
+        }
+    })
  */
