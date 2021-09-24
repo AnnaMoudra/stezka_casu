@@ -8,6 +8,41 @@ var translations = {
         'cs': "Start",
 
     },
+    'intro-sec': {
+        'en': "1 SECOND",
+        'cs': "SEKUNDA",
+
+    },
+    'intro-know': {
+        'en': "Do you know how long it really is? Too short? Or too much?",
+        'cs': "Víš, jak je dlouhá? Málo? Nebo moc?",
+
+    },
+    'intro-mouse': {
+        'en': "check it with your own mouse ...",
+        'cs': "zjisti to na vlastní myš ...",
+
+    },
+    'intro-mili': {
+        'en': "does a milisecond last longer than a wingflap of a butterfly?",
+        'cs': "a je delší milisekunda nebo mávnutí motýlích křídel?",
+
+    },    
+    'intro-legend1': {
+        'en': "Nanosecond, microsecond, millisecond, picosecond, who knows? And how long do they even last and what's the point? You can find out in our timepath - a timeline that shows how long a second lasts and what all gets squeezed into it.",
+        'cs': "Nanosekunda, mikrosekunda, milisekunda, pikosekunda, kdo se v tom má vyznat? A jak dlouho vůbec trvají a k čemu to je? To si můžeš vyzkoušet v naší časostezce - časové ose, která ukazuje, jak dlouho trvá jedna sekunda a co všechno se do ní vmáčkne",
+
+    },
+    'intro-legend2': {
+        'en': 'Use the switches in the top right corner to switch between the axes - the top one (green) shows the time from one microsecond to one second. That\'s how long a second would be if 1 microsecond was the "length" of 1 pixel on your screen.',
+        'cs': 'Pomocí přepínačů v pravém horním rohu si můžeš mezi osami přepínat - horní (zelená) ukazuje čas od jedné mikrosekundy po jednu sekundu. Takhle dlouhá by byla sekunda, kdyby 1 mikrosekunda měla "délku" 1 pixelu na tvé obrazovce.',
+
+    },    
+    'intro-legend3': {
+        'en': 'The lower (pink) axis is for even smaller units - from one picosecond to one microsecond. This is how long the time span would be if 1 picosecond was "length" of 1 pixel.',
+        'cs': 'Spodní (růžová) osa je pro ještě menší jednotky - od jedné pikosekundy po jednu mikrosekundu. Takhle dlouhý by byl časový úsek, pokud by 1 pikosekunda měla "délku" 1 pixelu.',
+
+    },
     'halfway-there': {
         'en': "Halfway there...",
         'cs': "A jsme v polovině...",
@@ -148,8 +183,8 @@ var translations = {
         'cs':"Je tu pěkně prázdno.",
     },
     'time-is-a-drug':{
-        'en': '“Time is a drug. Too much of it kills you.”',
-        'cs': '„Čas je droga. Když ho užíváte příliš dlouho, zahubí vás.“'
+        'en': 'Time is a drug. Too much of it kills you.',
+        'cs': 'Čas je droga. Když ho užíváte příliš dlouho, zahubí vás.'
     },
     'small-gods':{
         'en':"Small Gods",
@@ -164,16 +199,25 @@ var translations = {
         'cs':"FZU",
     },
     'back-res-night':{
-        'en':"Czech European Researcher's Night",
-        'cs':"Noc Vědců 2021",
+        'en':"Czech European Researchers' Night",
+        'cs':"Noc vědců 2021",
     },
     'made-by':{
-        'en':"Made by the Institute of Physics of the Czech Academy of Sciences for the Czech European Researcher's Night",
-        'cs':"Vytvořeno Fyzikálním ústavem Akademie věd pro Noc vědců",
+        'en':"Made by the Institute of Physics of the Czech Academy of Sciences for the Czech European Researchers' Night",
+        'cs':"Vytvořeno Fyzikálním ústavem Akademie věd ČR pro Noc vědců",
     },
     'proc-cycle':{
         'en':"Cycle duration on 3GHz processor.",
         'cs':"Doba jednoho instrukčního cyklu 3GHz procesoru.",
+    },    
+    'second-end': {
+        'en': "1 SECOND",
+        'cs': "SEKUNDA",
+
+    },
+    'franklin':{
+        'en':"Lost time is never found again.",
+        'cs':"Ztracený čas už nikdy nenajdeme.",
     },
 
 }

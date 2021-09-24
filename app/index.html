@@ -62,18 +62,29 @@
         <div id="introwrap">
             <div id="navblocker">
                 <div class="intro-text">
-                    <p>SEKUNDA</p>
-                    <p>Víš, jak je dlouhá? Málo? Nebo <strong>moc</strong>?</p>
+                    <p id="intro-sec">SEKUNDA</p>
+                    <p id="intro-know">Víš, jak je dlouhá? Málo? Nebo <strong>moc</strong>?</p>
 
-                    <p>A je delší mikrosekunda nebo mávnutí motýlích křídel?</p>
+                    <p id="intro-mili">A je delší milisekunda nebo mávnutí motýlích křídel?</p>
 
-                    <p><strong>Zjisti to na vlastní myš ...</strong></p>
+                    <p id="intro-mouse">Zjisti to na vlastní myš ...</p>
                     
                 </div>
 
                 <img src="./img/nv_sipky.png" class="intro-sipky">
             </div>
-            <div id="introblocker"></div>
+
+            <div id="introblocker">
+                <div class="legend-wrapper">
+                <p id="intro-legend1">
+                    Nanosecond, microsecond, millisecond, picosecond, who knows? And how long do they even last and what's the point? You can find out in our timepath - a timeline that shows how long a second lasts and what all gets squeezed into it.</p>
+                    <p id="intro-legend2">
+                        Use the switches in the top right corner to switch between the axes - the top one (green) shows the time from one microsecond to one second. That's how long a second would be if 1 microsecond was the "length" of 1 pixel on your screen.</p>
+                    <p id="intro-legend3">
+                        The lower (pink) axis is for even smaller units - from one picosecond to one microsecond. This is how long the time span would be if 1 picosecond was "length" of 1 pixel.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div id="path_container">
@@ -205,49 +216,34 @@
             </div>
             -->
         </div>
-
-        <div class="finale">
-            <p>THE END</p>
-            <!--  -->
-            <div id="endwrap" style="left:-10em">
-                <div class="endline" id="endline1"></div>
-                <div id="endtxt">
-                </div>
-            </div>
-
-        </div>
-        
+      
         <div class="ending">
-
-            <div id="congratulations-on-making" style="left:1000px">
-                Congratulations on making it this far.
+            <div class="second-end">
+                <p id="second-end">SEKUNDA</p>
+                <p id="congratulations-on-making">
+                    Congratulations on making it this far.
+                </p>
             </div>
-
-            <div id="pretty-empty"  style="left:3500px">
-                Pretty empty out here.
-            </div>
-
-            <div id="the-fact-that" style="left:7500px">
-                The fact that you're here, in the midst of all this nothing, is pretty amazing when you stop and think about it.
-            </div>
-
-            <div style="left:9500px; font-size: 1.2em; font-family: 'Times New Roman'; font-weight: lighter;">
-                 <i><span id='time-is-a-drug'>&ldquo;Time is a drug. Too much of it kills you.&rdquo;</span></i>
-            </div>
-
-            <div style="left:9400px; top:49%; font-size: 0.9em;">
-                &#8211; Terry Pratchett, <i><span id='small-gods'>Small Gods</span></i>
-            </div>
-            <!--  Random messages 
-            -->
         </div>
 
         <div class="credits">
-            <div style="left:10300px">
-                <span id='inspired-by'>This project was inspired by the work of Josh Worth</span> &#124; <a href="https://joshworth.com/">JoshWorth.com</a>
+            <div>
+                <p><span class="quote" id='time-is-a-drug'>Time is a drug. Too much of it kills you.</span>
+                    <span class="quote-author">Terry Pratchett, <span id='small-gods'>Small Gods</span></span>
+                </p>
+            </div>
+            <div>
+                <span id='inspired-by'>This project was inspired by the work of Josh Worth</span>&nbsp;&#124;&nbsp;<a href="https://joshworth.com/">JoshWorth.com</a>
             </div>
 
-            <div style="left:11700px; min-width:max-content; padding-right: 40vw;">
+            <div>
+                <p><span class="quote" id='franklin'>Lost time is never found again.</span>
+                    <span class="quote-author">Benjamin Franklin</span>
+                </p>
+            </div>
+
+            <div class="last">
+                <div>
                 <span id="made-by" style="display: table; margin: 0 auto; padding-bottom: 1em;">
                     Made by the Institute of Physics of the Czech Academy of Sciences for the Czech European Researcher's Night
                 </span>
@@ -255,6 +251,7 @@
                     <a href="https://www.fzu.cz/"><span id='back-fzu'>FZU</span></a> &#124;
                     <a href="https://www.nocvedcu.cz/"><span id='back-res-night'>Czech European Researcher's Night</span></a>
                 </span>
+                </div>
             </div>
         </div>
 
