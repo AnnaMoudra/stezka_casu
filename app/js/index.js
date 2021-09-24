@@ -1,3 +1,4 @@
+var languages = {English: 'en', Čeština: 'cs'}
 var lightspeed = 1000
 var _1unit = 1
 var unit = 'μs'
@@ -7,6 +8,9 @@ var decimalmark = '.'
 var unitname = 'μs'
 var unitname2 = 'ps'
 var language = languages.Čeština
+for (var translation in translations) {
+    $('#' + translation).text(translations[translation][language])
+}
 var currentRAFID = 0
 var isSpeeding = 0
 var unitTable = {
