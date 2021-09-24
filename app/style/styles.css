@@ -187,7 +187,7 @@ button.activebutton{
 
 #navblocker {
     background-color: #181819;
-    background:  url("../img/nv_bg.png") bottom center no-repeat;
+    background:  linear-gradient(to right, transparent, #181819 99%), url("../img/nv_bg.png") bottom center no-repeat;
     background-size: cover;
     height: 100vh;
     width: 80vw;

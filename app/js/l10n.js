@@ -14,23 +14,23 @@ var translations = {
 
     },
     'intro-know': {
-        'en': "Do you know how long it really is? Too short? Or too much?",
+        'en': "Do you know how long it really is? Too short? Or too long?",
         'cs': "Víš, jak je dlouhá? Málo? Nebo moc?",
 
     },
     'intro-mouse': {
-        'en': "check it with your own mouse ...",
+        'en': "find out with your own mouse ...",
         'cs': "zjisti to na vlastní myš ...",
 
     },
     'intro-mili': {
-        'en': "does a milisecond last longer than a wingflap of a butterfly?",
+        'en': "does a millisecond last longer than one wing beat of a butterfly?",
         'cs': "a je delší milisekunda nebo mávnutí motýlích křídel?",
 
     },    
     'intro-legend1': {
-        'en': "Nanosecond, microsecond, millisecond, picosecond, who knows? And how long do they even last and what's the point? You can find out in our timepath - a timeline that shows how long a second lasts and what all gets squeezed into it.",
-        'cs': "Nanosekunda, mikrosekunda, milisekunda, pikosekunda, kdo se v tom má vyznat? A jak dlouho vůbec trvají a k čemu to je? To si můžeš vyzkoušet v naší časostezce - časové ose, která ukazuje, jak dlouho trvá jedna sekunda a co všechno se do ní vmáčkne",
+        'en': "Nanosecond, microsecond, millisecond, picosecond, who knows? And how long do they even last and what's the point? You can find out in our timepath - a timeline that shows how long a second lasts and all that gets squeezed in it.",
+        'cs': "Nanosekunda, mikrosekunda, milisekunda, pikosekunda, kdo se v tom má vyznat? A jak dlouho vůbec trvají a k čemu to je? To si můžeš vyzkoušet v naší časostezce - časové ose, která ukazuje, jak dlouho trvá jedna sekunda a co všechno se do ní vmáčkne.",
 
     },
     'intro-legend2': {
@@ -219,7 +219,30 @@ var translations = {
         'en':"Lost time is never found again.",
         'cs':"Ztracený čas už nikdy nenajdeme.",
     },
-
+    'hydrogen-bomb':{
+        'en':"Time of fusion reaction in a hydrogen bomb.",
+        'cs':"Trvání fúzní reakce ve vodíkové bombě.",
+    },
+    'otakarek-wings':{
+        'en':"One wing beat of Papilio machaon.",
+        'cs':"Mávnutí křídel otakárka fenyklového.",
+    },
+    'heartbeat':{
+        'en':"Average human cardiac cycle at rest.",
+        'cs':"Průměrná doba srdečního cyklu u člověka v klidovém stavu.",
+    },
+    'pulsar-duration':{
+        'en':"Pulse duration of PSR B1919+21 - first known radio pulsar, discovered in 1967 by Jocelyn Bell.",
+        'cs':"Délka pulzu prvního známého rádiového pulsaru, který byl objeven v roce 1967 Jocelyn Bell.",
+    },
+    'eye-focus':{
+        'en':"Shortest time of acommodation for the human eye.",
+        'cs':"Nejkratší čas zaostření lidského oka.",
+    },
+    'bivoj':{
+        'en':"One energy pulse duration of the BIVOJ laser in Czech HiLASE centre.",
+        'cs':"Délka trvání rekordního pulzu laseru BIVOJ v českém laserovém centru HiLASE.",
+    },
 }
 var languages = {English: 'en', Čeština: 'cs'}
 var delimeters = {English: ',', Čeština: ' '}
