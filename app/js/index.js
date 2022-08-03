@@ -1,4 +1,4 @@
-var languages = {English: 'en', Čeština: 'cs'}
+
 var lightspeed = 1000
 var _1unit = 1
 var unit = 'μs'
@@ -7,10 +7,6 @@ var delimeter = ','
 var decimalmark = '.'
 var unitname = 'μs'
 var unitname2 = 'ps'
-var language = languages.Čeština
-for (var translation in translations) {
-    $('#' + translation).text(translations[translation][language])
-}
 var currentRAFID = 0
 var isSpeeding = 0
 var unitTable = {
@@ -22,9 +18,15 @@ var unitTable = {
     km: 1,
     mm: 1,
     blinks: 0.4,
-    //lightminutes: 0.0000000555941,
     pixels: 1,
 }
+
+var languages = {English: 'en', Čeština: 'cs'}
+var language = languages.Čeština
+for (var translation in translations) {
+    $('#' + translation).text(translations[translation][language])
+}
+
 
 var msgTimer
 var msgNum = [$('#msg1'), $('#msg2'), $('#msg3'), $('#msg4'), $('#msg5')]
@@ -81,10 +83,7 @@ $(function () {
     });
 
     //jump coordinates for special symbols
-    //var marks = [$('#path_container').offset().left, ($('#path_container').offset().left + $('#path_container').width())];
-    //console.log(marks);
-    var marks = []; //we have no special symbols yet
-
+    var marks = []; 
     var destinations1 = $.makeArray(timeline1Marks);
     destinations1.sort(function (a, b) {
         return a - b
@@ -99,10 +98,8 @@ $(function () {
     var destinationNext2 = destinations1[0];
 
     $('ul.nav a.nextjump').bind('click', function (event) {
-        //cancelLightMsg()
         stopSpeeding();
         var classes = $.makeArray($(this)[0].classList)
-        //console.log(t));
         if(classes.includes("timepath1")){
             destinations = destinations1
             destinationNext = destinationNext1
@@ -131,12 +128,10 @@ $(function () {
     })
 
     $('ul.nav a.prevjump').bind('click', function (event) {
-        //cancelLightMsg()
         stopSpeeding();
         var currentDist = (window.pageXOffset);
 
         var classes = $.makeArray($(this)[0].classList)
-        //console.log(t));
         if(classes.includes("timepath1")){
             destinations = destinations1
             destinationNext = destinationNext1
@@ -256,75 +251,6 @@ function stopSpeeding() {
     cancelAnimationFrame(currentRAFID);
 }
 
+
 $('#monitors').text(Math.floor($('#timepath').width() / screen.availWidth / window.devicePixelRatio));
 $(window).scroll(updateDistance);
-
-/** Unused functions
- * 
- * 
- *  Changing units when speeding
- function changeUnitToSpeed() {
-    unit = 'mm'
-    unit2 = 'mm'
-    unitname = 'mm'//$('#lightminutes').text()
-    unitname2 = 'mm'
-    updateDistance()
-};
-
-function changeUnitToBlink() {
-    unit = 'blinks'
-    unit2 = 'blinks'
-    unitname = 'blinks'//$('#lightminutes').text()
-    unitname2 = 'blinks'
-    updateDistance()
-};
- * 
- * Messages when speeding
-function fadeInLightMsg() {
-    msgNum[msgIndex].fadeIn(500)
-    msgTimer = window.setTimeout(fadeOutLightMsg, 4500)
-};
-
-function fadeOutLightMsg() {
-    msgNum[msgIndex].fadeOut(500)
-    if (msgIndex < msgNum.length - 1) {
-        msgIndex = msgIndex + 1
-        fadeInLightMsg()
-    } else {
-        return
-    }
-};
- * 
- * 
- * 
- * 
- function cancelLightMsg() {
-    msgNum[msgIndex].fadeOut(500)
-    msgIndex = 0
-    isSpeeding = 0
-    window.clearTimeout(msgTimer)
-    $('#speedmsg').css('display', 'none')
-    $('#speeder a').css('opacity', 0.7)
-};
-
-
-$('#speeder button').on('click', function (e) {
-        stopSpeeding()
-        if (isSpeeding == 1) {
-            document.getElementById('speeder-button').classList.remove('activebutton');
-            cancelLightMsg()
-            stopSpeeding()
-            isSpeeding = 0
-            return false
-        }
-        else {
-            document.getElementById('speeder-button').classList.add('activebutton');
-            isSpeeding = 1
-            fadeInLightMsg()
-            changeUnitToSpeed()
-            $('#speedmsg').css('display', 'block')
-            currentRAFID = startSpeedingAt()
-            return false
-        }
-    })
- */
