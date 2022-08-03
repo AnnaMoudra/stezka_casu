@@ -21,21 +21,15 @@ else {
     visible_counters = true;
     showCounters();
 }
-//window.path_switcher_opacity = 0
-//$('.path_switcher')[0].style.opacity = window.path_switcher_opacity;
 
 function hideCounters() {
     document.getElementById('distance-counter1').style.opacity = 0;
     document.getElementById('distance-counter2').style.opacity = 0;
-    //document.getElementById('counterline1').style.opacity = 0;
-    //document.getElementById('counterline2').style.opacity = 0;
 };
 
 function showCounters() {
     document.getElementById('distance-counter1').style.opacity = 1.0;
     document.getElementById('distance-counter2').style.opacity = 1.0;
-    //document.getElementById('counterline1').style.opacity = 1.0;
-    //document.getElementById('counterline2').style.opacity = 1.0;
 };
 
 function hideEventJumps() {
@@ -46,7 +40,6 @@ function hideEventJumps() {
         navigator_btns[i].classList.remove('cursor_pointer');
         navigator_btns[i].style.pointerEvents = 'none';
     }
-    
 }
 
 function showEventJumps() {
@@ -79,9 +72,6 @@ function showPathSwitcher() {
 
 
 $(window).scroll(function () {
-    /* Check the location of each desired element */
-    //console.log("Current scroll position:", window.pageXOffset, start, finish);
-    //console.log("eventjumps:", visible_eventjumps);
     var scroll_position = window.pageXOffset;
 
     // scrolling in and out counters
@@ -99,7 +89,7 @@ $(window).scroll(function () {
     };
 
     //scrolling in and out path buttons
-    /* If the object is completely visible in the window, fade it it */
+    /* And if the object is completely visible in the window, fade it it */
     if (visible_buttons && start > scroll_position){
         visible_buttons = false;
         hidePathSwitcher();
@@ -126,7 +116,7 @@ $(window).scroll(function () {
         visible_eventjumps = true;
     }
     else if (visible_eventjumps && start < scroll_position && finish < scroll_position) {
-        //after finish
+        // after finish
         hideEventJumps();
         visible_eventjumps = false;
     };
